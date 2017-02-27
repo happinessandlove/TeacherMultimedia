@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSharpHelper.Extension</name>
+    </assembly>
+    <members>
+        <member name="T:System.Linq.IEnumerableExtensionMethods">
+            <summary>
+            IEnumerable&lt;T&gt;的扩展方法 去除重复项
+            </summary>
+        </member>
+        <member name="M:System.Linq.IEnumerableExtensionMethods.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Distinct比较器
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="source"></param>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Linq.Expressions.ExpressionHelper">
+            <summary>
+            （自定义）表达式树相关的辅助类
+            </summary>
+        </member>
+        <member name="M:System.Linq.Expressions.ExpressionHelper.ParsePropertyName(System.Type,System.String,System.Linq.Expressions.ParameterExpression,System.Type@)">
+            <summary>
+            根据属性名称构建一个访问属性的表达式树，形如：p=>p.Name
+            </summary>
+            <param name="objectType">属性所在类的类型</param>
+            <param name="propertyName">属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name</param>
+            <param name="param">表达式树的形参</param>
+            <param name="propertyType">out 属性类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Linq.IQueryableExtensionMethods">
+            <summary>
+            IQueryable&lt;T&gt;的扩展方法 排序相关
+            </summary>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.OrderBy``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            （自定义）根据属性名称对序列进行升序排序。
+            </summary>
+            <typeparam name="T">序列中的元素类型。</typeparam>
+            <param name="source">待排序序列。</param>
+            <param name="propertyName">排序依据的属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.OrderByDescending``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            （自定义）根据属性名称对序列进行降序排序。
+            </summary>
+            <typeparam name="T">序列中的元素类型。</typeparam>
+            <param name="source">待排序序列。</param>
+            <param name="propertyName">排序依据的属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.Sort``1(System.Linq.IQueryable{``0},System.String,System.Web.Helpers.SortDirection)">
+            <summary>
+            （自定义）根据属性名称以及排序方向对序列进行排序。
+            </summary>
+            <typeparam name="T">序列中的元素类型。</typeparam>
+            <param name="source">待排序序列。</param>
+            <param name="propertyName">排序依据的属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name。</param>
+            <param name="sortDirection">排序方向。OrderDirection枚举。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.ThenBy``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            （自定义）根据属性名称对序列进行后续升序排序。
+            </summary>
+            <typeparam name="T">序列中的元素类型。</typeparam>
+            <param name="source">待排序序列。</param>
+            <param name="propertyName">排序依据的属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.ThenByDescending``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            （自定义）根据属性名称对序列进行后续降序排序。
+            </summary>
+            <typeparam name="T">序列中的元素类型。</typeparam>
+            <param name="source">待排序序列。</param>
+            <param name="propertyName">排序依据的属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.ThenSort``1(System.Linq.IQueryable{``0},System.String,System.Web.Helpers.SortDirection)">
+            <summary>
+            （自定义）根据属性名称以及排序方向对序列进行后续排序。
+            </summary>
+            <typeparam name="T">序列中的元素类型。</typeparam>
+            <param name="source">待排序序列。</param>
+            <param name="propertyName">排序依据的属性名称，可为多级导航属性，忽略大小写，必须为public。如：Clas.College.Name。</param>
+            <param name="sortDirection">排序方向。OrderDirection枚举。</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Reflection.ReflectionHelper">
+            <summary>
+            （自定义）反射获取程序集、接口、类、类的属性
+            </summary>
+        </member>
+        <member name="M:System.Reflection.ReflectionHelper.GetProperty(System.Type,System.String)">
+            <summary>
+            获取属性信息
+            <para>  忽略大小写，必须为public的属性</para>
+            </summary>
+            <param name="classType">实体类型</param>
+            <param name="propertyName">属性名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Reflection.ReflectionHelper.GetProperty(System.Type@,System.String)">
+            <summary>
+            获取属性信息，可以为多级导航属性
+            <para>  忽略大小写，必须为public的属性</para>
+            </summary>
+            <param name="classType">起始实体的类型。</param>
+            <para>  如：typeof(Student)，对应的propertyNameString:"Clas.College.University.Name"。</para>
+            <para>  方法执行后得到最终属性所在实体的类型。如："Clas.College.University.Name"得到"University"的类型。</para>
+            <param name="propertyNameString">属性名称，可以为多级名称。如："Clas.College.University.Name"。</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

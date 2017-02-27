@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PhotoProcess</name>
+    </assembly>
+    <members>
+        <member name="T:PhotoProcess.Photo">
+            <summary>
+            图片缩略处理，添加水印
+            </summary>
+        </member>
+        <member name="M:PhotoProcess.Photo.ToThumbnail(System.String,System.String,PhotoProcess.ThumBasedOn,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            等比例缩略图片，若原图片尺寸小于参数值，仅拷贝原图片为新文件名
+            </summary>
+            <param name="sourceImagePath">原图片相对路径。 如："~/image.jpg"、"/image.jpg"</param>
+            <param name="thumbnailImagePath">缩略图存放的相对路径。 如："~/newImage.jpg"、"/newImage.jpg"</param>
+            <param name="type">缩略模式</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="quality">缩略图片质量，默认为最高质量100</param>
+        </member>
+        <member name="M:PhotoProcess.Photo.ToThumbnail(System.String,System.String,PhotoProcess.ThumBasedOn,System.Int32,System.Int32)">
+            <summary>
+            等比例缩略图片，若原图片尺寸小于参数值，不做任何处理
+            </summary>
+            <param name="sourceImagePath">原图片相对路径。 如："~/image.jpg"、"/image.jpg"</param>
+            <param name="thumbnailImagePath">缩略图存放的相对路径。 如："~/newImage.jpg"、"/newImage.jpg"</param>
+            <param name="type">缩略模式</param>
+            <param name="size">根据缩略模式，指定宽度或高度</param>
+            <param name="quality">缩略图片质量，默认为最高质量100</param>
+        </member>
+        <member name="M:PhotoProcess.Photo.AddWaterMark(System.String,System.String,PhotoProcess.WaterMarkType,PhotoProcess.WaterMarkPosition,System.String)">
+            <summary>
+            图片添加水印
+            </summary>
+            <param name="oldPath">原图片相对地址。 如："~/image.jpg"</param>
+            <param name="newPath">生成图片存放的相对地址。 如："~/newImage.jpg"</param>
+            <param name="wmType">水印的类型（枚举类型）。 如：WaterMarkType.TextMark 、 WaterMarkType.ImageMark</param>
+            <param name="wmPosition">水印的位置（枚举类型）。 如：WaterMarkPosition.LeftTop、WaterMarkPosition.LeftMiddle、WaterMarkPosition.LeftBottom、WaterMarkPosition.CenterTop、WaterMarkPosition.CenterMiddle、WaterMarkPosition.CenterBottom、WaterMarkPosition.RightTop、WaterMarkPosition.RightMiddle、WaterMarkPosition.RightBottom</param>
+            <param name="wmTextOrPicPath">水印内容。 若添加文字水印，此为要添加的文字；若添加图片水印，此为图片的路径</param>
+        </member>
+        <member name="T:PhotoProcess.ThumBasedOn">
+            <summary>
+            缩放类型
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.ThumBasedOn.HeightAndWidth">
+            <summary>
+            等比例缩小至宽度和高度均小于等于给定的宽、高度值
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.ThumBasedOn.HeightOrWidth">
+            <summary>
+            等比例缩小至宽度或高度等于给定的宽、高度值
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.ThumBasedOn.Height">
+            <summary>
+            等比例缩小至高度等于给定的高度值
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.ThumBasedOn.Width">
+            <summary>
+            等比例缩小至宽度等于给定宽度值
+            </summary>
+        </member>
+        <member name="T:PhotoProcess.ValidateCodeImage">
+            <summary>
+            生成验证码
+            </summary>
+        </member>
+        <member name="M:PhotoProcess.ValidateCodeImage.Generate(System.Byte[]@,System.Int32,System.Int32,System.Drawing.Color,System.Drawing.Color,System.Int32,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            生成校验码图片
+            </summary>
+            <param name="imageStreamBytes">生成图片以字节流形式保存</param>
+            <param name="codeLength">验证码长度</param>
+            <param name="imageHeight">图片高度，宽度根据验证码长度计算</param>
+            <param name="backgroundColor">背景颜色</param>
+            <param name="borderColor">边框颜色</param>
+            <param name="fontSize">字体大小，默认14磅</param>
+            <param name="doDegree">是否倾斜，默认随机顺时针或逆时针倾斜20度</param>
+            <param name="drawChaos">是否画噪点，默认画噪点，颜色为背景色</param>
+            <param name="chaosCount">噪点数，默认100个</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhotoProcess.ValidateCodeImage.TwistImage(System.Drawing.Bitmap,System.Boolean,System.Double,System.Double)">
+            <summary>
+            正弦曲线Wave扭曲图片（Edit By 51aspx.com）
+            </summary>
+            <param name="srcBmp">图片路径</param>
+            <param name="bXDir">如果扭曲则选择为True</param>
+            <param name="dMultValue">波形的幅度倍数，越大扭曲的程度越高，一般为3</param>
+            <param name="dPhase">波形的起始相位，取值区间[0-2*PI)</param>
+            <returns></returns>
+        </member>
+        <member name="M:PhotoProcess.ValidateCodeImage.GenerateValidateCode(System.Int32,System.String)">
+            <summary>
+            生成随机验证码
+            </summary>
+            <returns>返回验证码字符串</returns>
+        </member>
+        <member name="T:PhotoProcess.WaterMarkType">
+            <summary>
+            水印类型
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkType.Text">
+            <summary>
+            文本水印
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkType.Image">
+            <summary>
+            图片水印
+            </summary>
+        </member>
+        <member name="T:PhotoProcess.WaterMarkPosition">
+            <summary>
+            水印的位置
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.LeftTop">
+            <summary>
+            左上
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.LeftMiddle">
+            <summary>
+            左中
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.LeftBottom">
+            <summary>
+            坐下
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.CenterTop">
+            <summary>
+            中上
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.CenterMiddle">
+            <summary>
+            中中
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.CenterBottom">
+            <summary>
+            中下
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.RightTop">
+            <summary>
+            右上
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.RightMiddle">
+            <summary>
+            右中
+            </summary>
+        </member>
+        <member name="F:PhotoProcess.WaterMarkPosition.RightBottom">
+            <summary>
+            右下
+            </summary>
+        </member>
+        <member name="M:PhotoProcess.WaterMark.AddWaterMark(System.String,System.String,PhotoProcess.WaterMarkType,PhotoProcess.WaterMarkPosition,System.String)">
+            <summary>
+            图片添加水印
+            </summary>
+            <param name="oldPath">原图片相对地址。 如："~/image.jpg"</param>
+            <param name="newPath">生成图片存放的相对地址。 如："~/newImage.jpg"</param>
+            <param name="wmType">水印的类型（枚举类型）。 如：WaterMarkType.TextMark 、 WaterMarkType.ImageMark</param>
+            <param name="wmPosition">水印的位置（枚举类型）。 如：WaterMarkPosition.LeftTop、WaterMarkPosition.LeftMiddle、WaterMarkPosition.LeftBottom、WaterMarkPosition.CenterTop、WaterMarkPosition.CenterMiddle、WaterMarkPosition.CenterBottom、WaterMarkPosition.RightTop、WaterMarkPosition.RightMiddle、WaterMarkPosition.RightBottom</param>
+            <param name="wmTextOrPicPath">水印内容。 若添加文字水印，此为要添加的文字；若添加图片水印，此为图片的路径</param>
+        </member>
+    </members>
+</doc>

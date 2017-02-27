@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MvcHelper.HtmlHelper</name>
+    </assembly>
+    <members>
+        <member name="T:System.Web.Mvc.Html.HtmlHelpers">
+            <summary>
+            HtmlHelper的扩展方法，用于呈现Html元素。
+            </summary>
+            <summary>
+            HtmlHelper的扩展方法，用于呈现Html元素。
+            </summary>
+            <summary>
+            HtmlHelper的扩展方法，用于呈现Html元素。
+            </summary>
+            <summary>
+            HtmlHelper的扩展方法，用于呈现Html元素。
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.GenderFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            （自定义）性别单选按钮组
+            </summary>
+            <param name="html"></param>
+            <param name="e">属性(lambda表达式)</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.OutlineFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Int32)">
+            <summary>
+            （自定义）截取内容的前若干个字符
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="html"></param>
+            <param name="expression"></param>
+            <param name="length">长度  一个中文算1个长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.DisplayNameFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Int32,System.Boolean)">
+            <summary>
+            （自定义）显示该属性在Model类中设置的DisplayName值
+            </summary>
+            <param name="html"></param>
+            <param name="expression">属性(lambda表达式)</param>
+            <param name="finalMaxLength">插入全角空格后，字符串最大长度限制</param>
+            <param name="addColon">是否在文字后面添加中文冒号，缺省值为false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.DisplayNameFor``2(System.Web.Mvc.HtmlHelper{System.Collections.Generic.IEnumerable{``0}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Int32,System.Boolean)">
+            <summary>
+            （自定义）显示该属性在Model类中设置的Display值
+            </summary>
+            <param name="html"></param>
+            <param name="expression">属性(lambda表达式)</param>
+            <param name="finalMaxLength">插入全角空格后，字符串最大长度限制</param>
+            <param name="addColon">是否在文字后面添加中文冒号，缺省值为false</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

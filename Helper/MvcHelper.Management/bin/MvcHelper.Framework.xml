@@ -1,0 +1,1141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MvcHelper.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:System.Web.Mvc.Access">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Access.All">
+            <summary>
+            访问权限字典，来源于Session。
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Access.Validate(System.String)">
+            <summary>
+            权限验证
+            </summary>
+            <param name="directoryId">站点目录中id属性值</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.Html.HtmlHelpers">
+            <summary>
+            HtmlHelper的扩展方法，用于呈现Html元素。
+            </summary>
+            <summary>
+            生成页码的Html辅助方法类。
+            </summary>
+            <summary>
+            （自定义）查询对话框的HtmlHelper扩展方法
+            </summary>
+            <summary>
+            下拉列表框的Html辅助方法类。
+            </summary>
+            <summary>
+            菜单的Html辅助方法类。
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderCustomToolbarItem``1(System.Web.Mvc.HtmlHelper{``0},System.String,System.Web.Mvc.PageInfo,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            （自定义）绘制特殊工具栏按钮
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="pageId">站点目录Action节点的id</param>
+            <param name="pageInfo">Action节点所属Controller页面信息</param>
+            <param name="access">权限字典</param>
+            <param name="jsFunction">点击后执行的js方法</param>
+            <param name="urlParamString">url参数字符串</param>
+            <param name="itemText">按钮显示文本，若为null，取站点目录中的title属性值</param>
+            <param name="url">链接url，若为null，值为/{ControllerName}/{ActionName}</param>
+            <param name="cssClass">样式名称，自动加前缀“tool-”,若为null，取Action节点的Name属性值</param>
+            <param name="tabId">打开新标签页的id，若为null，取站点目录中的id属性值</param>
+            <param name="tabTitle">打开新标签的显示文本，若为null，取站点目录中的title属性值</param>
+            <param name="menuId">打开新标签对应的菜单，若为null，取pageInfo的id属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderRefreshToolbarItem``1(System.Web.Mvc.HtmlHelper{``0})">
+            <summary>
+            （自定义）绘制刷新工具栏按钮
+            </summary>
+            <param name="html"></param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderCreateToolbarItem``1(System.Web.Mvc.HtmlHelper{``0},System.Web.Mvc.PageInfo,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+            <summary>
+            （自定义）绘制创建工具栏按钮
+            </summary>
+            <param name="html"></param>
+            <param name="pageInfo">Controller页面信息</param>
+            <param name="access">权限字典</param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderDeleteToolbarItem``1(System.Web.Mvc.HtmlHelper{``0},System.Web.Mvc.PageInfo,System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+            <summary>
+            （自定义）绘制删除工具栏按钮
+            </summary>
+            <param name="html"></param>
+            <param name="pageInfo">Controller页面信息</param>
+            <param name="access">权限字典</param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderQueryToolbarItem``1(System.Web.Mvc.HtmlHelper{``0})">
+            <summary>
+            （自定义）绘制查询工具栏按钮
+            </summary>
+            <param name="html"></param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderExportToolbarItem``1(System.Web.Mvc.HtmlHelper{``0},System.Web.Mvc.PageInfo,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Object)">
+            <summary>
+            （自定义）绘制导出工具栏按钮
+            </summary>
+            <param name="html"></param>
+            <param name="currentPageInfo">页面信息</param>
+            <param name="access">权限字典</param>
+            <param name="id">导出项的主键</param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderReturnToolbarItem``1(System.Web.Mvc.HtmlHelper{``0},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制返回工具栏按钮，返回到Default Action页面
+            </summary>
+            <param name="html"></param>
+            <param name="currentPageInfo">页面信息</param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderReturnToolbarItem``1(System.Web.Mvc.HtmlHelper{``0},System.Web.Mvc.PageInfo,System.String,System.String)">
+            <summary>
+            （自定义）绘制返回工具栏按钮，返回到指定页面
+            </summary>
+            <param name="html"></param>
+            <param name="currentPageInfo">页面信息</param>
+            <param name="returnPageId">返回的页面id</param>
+            <param name="tabId">标签的Id，缺省值为页面节点的id</param>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.ColumnHeaderFor``2(System.Web.Mvc.HtmlHelper{System.Collections.Generic.IEnumerable{``0}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Int32)">
+            <summary>
+            （自定义）生成列标题
+            </summary>
+            <typeparam name="TModel">页面模型类型</typeparam>
+            <typeparam name="TDisplayProperty">显示属性的类型</typeparam>
+            <param name="html"></param>
+            <param name="displayPropertyExpression">显示属性的lambda表达式</param>
+            <param name="finalMaxLength">在获取到的DisplayName值的文字与文字中插入全角空格后，字符串最大长度限制，缺省值为4</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SortColumnHeaderFor``2(System.Web.Mvc.HtmlHelper{System.Collections.Generic.IEnumerable{``0}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Int32)">
+            <summary>
+            （自定义）生成带排序功能的列标题
+            </summary>
+            <typeparam name="TModel">页面模型类型</typeparam>
+            <typeparam name="TProperty">显示属性以及排序属性的类型</typeparam>
+            <param name="html"></param>
+            <param name="propertyExpression">显示属性以及排序属性的lambda表达式，显示和排序属性相同</param>
+            <param name="finalMaxLength">在获取到的DisplayName值的文字与文字中插入全角空格后，字符串最大长度限制，缺省值为4</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SortColumnHeaderFor``3(System.Web.Mvc.HtmlHelper{System.Collections.Generic.IEnumerable{``0}},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Int32)">
+            <summary>
+            （自定义）生成带排序功能的列标题，针对外键导航属性
+            </summary>
+            <typeparam name="TModel">页面模型类型</typeparam>
+            <typeparam name="TDisplayProperty">显示属性的类型</typeparam>
+            <typeparam name="TSortProperty">排序属性的类型</typeparam>
+            <param name="html"></param>
+            <param name="displayPropertyExpression">显示属性的lambda表达式 例：model=>model.Class</param>
+            <param name="sortPropertyExpression">排序属性的lambda表达式 例：model=>model.Class.Name</param>
+            <param name="finalMaxLength">在获取到的DisplayName值的文字与文字中插入全角空格后，字符串最大长度限制，缺省值为4</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderNoColumnHeader``1(System.Web.Mvc.HtmlHelper{``0})">
+            <summary>
+            （自定义）绘制列表页标题栏的“序号”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderSelectAllColumnHeader``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制列表页标题栏的“全选”复选框
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">Controller页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderDetailsColumnHeader``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制列表页标题栏的“详情”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">Controller页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderRankUpColumnHeader``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制列表页标题栏的“排序”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">Controller页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEditColumnHeader``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.String)">
+            <summary>
+            （自定义）绘制列表页标题栏的“编辑”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">Controller页面信息</param>
+            <param name="title">列标题名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderDeleteColumnHeader``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制列表页标题栏的“删除”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">Controller页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderCustomColumnHeader``1(System.Web.Mvc.HtmlHelper{``0},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.String,System.String)">
+            <summary>
+            （自定义）绘制自定义的列表页标题栏
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="pageId">站点目录Action节点的id</param>
+            <param name="access">权限字典</param>
+            <param name="controllerPageInfo">Controller页面信息</param>
+            <param name="cssClass">样式名称，自动加前缀“col-”,若为null，取Action节点的name属性值</param>
+            <param name="headerText">列标题，若为null，取Action节点的namecn属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderNoColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Int32,System.Web.Mvc.Pager)">
+            <summary>
+            （自定义）绘制列表页数据项的“序号”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="index">当前数据项在本页数据中的次序</param>
+            <param name="pager">封装的页码信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderSelectColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.Object)">
+            <summary>
+            绘制列表页数据项的“选中”复选框
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <param name="itemId">当前数据项的主键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEmptySelectColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            绘制空的列表页数据项的“选中”复选框
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderRankUpColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.Object,System.Int32,System.Int32)">
+            <summary>
+            （自定义）绘制列表页数据项的“排序”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <param name="itemId">当前数据项的主键值</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="index">当前数据项在本页数据中的次序</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEmptyRankUpColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制空的列表页数据项的“排序”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderDetailsColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.Object,System.String)">
+            <summary>
+            （自定义）绘制列表页数据项的“详情”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <param name="itemId">当前数据项的主键值</param>
+            <param name="tabTitle">当前项的主要名称，显示在页面标签中</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEmptyDetailsColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制空的列表页数据项的“详情”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEditColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.Object,System.String)">
+            <summary>
+            （自定义）绘制列表页数据项的“编辑”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <param name="itemId">当前数据项的主键值</param>
+            <param name="tabTitle">当前项的主要名称，显示在页面标签中</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEmptyEditColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制空的列表页数据项的“编辑”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderDeleteColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.Object)">
+            <summary>
+            （自定义）绘制列表页数据项的“删除”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <param name="itemId">当前数据项的主键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEmptyDeleteColumn``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo)">
+            <summary>
+            （自定义）绘制列表页数据项的“删除”
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">站点目录封装的页面信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderCustomColumn``1(System.Web.Mvc.HtmlHelper{``0},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            （自定义）绘制自定义的列表页数据项的操作按钮
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="pageId">站点目录Action节点的id</param>
+            <param name="access">权限字典</param>
+            <param name="controllerPageInfo">Action节点所属Controller页面信息</param>
+            <param name="itemId">当前数据项的主键值</param>
+            <param name="tabTitle">打开新标签的显示文本，若为null，取站点目录中的title属性值，否则为“站点目录中的title属性值-tabTitle”</param>
+            <param name="jsFunction">点击后执行的js方法</param>
+            <param name="itemText">按钮显示文本，若为null，取站点目录中的title属性值</param>
+            <param name="url">链接url，若为null，值为/{ControllerName}/{ActionName}</param>
+            <param name="urlParamString">url参数字符串</param>
+            <param name="cssClass">样式名称，自动加前缀“button-”,若为null，取Action节点的Name属性值</param>
+            <param name="tabId">打开新标签页的id，若为null，取站点目录中的id属性值</param>
+            <param name="menuId">打开新标签对应的菜单，若为null，取pageInfo的id属性</param>
+            <param name="htmlAttributes">其他html标签的属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderEmptyCustomColumn``1(System.Web.Mvc.HtmlHelper{``0},System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean},System.Web.Mvc.PageInfo,System.String)">
+            <summary>
+            （自定义）绘制空的列表页数据项的列
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="pageId">站点目录Action节点的id</param>
+            <param name="access">权限字典</param>
+            <param name="pageInfo">Action节点所属Controller页面信息</param>
+            <param name="cssClass">样式名称，自动加前缀“col-”,若为null，取Action节点的Name属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderPager``1(System.Web.Mvc.HtmlHelper{``0},System.Web.Mvc.Pager)">
+            <summary>
+            （自定义）绘制页码
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="pager">封装的页码信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.QueryFor``1(System.Web.Mvc.HtmlHelper{``0},System.String,System.String)">
+            <summary>
+            扩展方法，查询对话框。
+            </summary>
+            <typeparam name="TModel">视图页面强类型</typeparam>
+            <param name="html"></param>
+            <param name="queryString">json格式的查询字符串。用于查询后的页面生成时，重绘先前的查询对话框中的查询条件。</param>
+            <param name="excludeProperties">排除的属性，多个属性以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SelectListFor``3(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Boolean,System.String,System.String)">
+            <summary>
+            （自定义）Html扩展方法，生成下拉列表框。
+            <para>  下拉列表框的值属性：自动匹配。第一缺省值为带有[SelectListValueProperty]标识的属性，第二缺省值为带有[Key]标识的属性，第三缺省值为“id”，第四缺省值为“类型名称Id”。</para>
+            <para>  下拉列表框的显示属性：自动匹配。第一缺省值为带有[SelectListTextProperty]标识的属性，第二缺省值为“name”，第三缺省值为“类型名称name”。</para> 
+            <para>  数据源：数据表全部数据。</para>
+            <para>  排序方式：按主键升序排序。</para>
+            </summary>
+            <typeparam name="TPageModel">实体类型，通常为页面强类型。</typeparam>
+            <typeparam name="TProperty">属性类型。</typeparam>
+            <typeparam name="TSourceDataModel">下拉列表框数据来源的实体类型。</typeparam>
+            <param name="html"></param>
+            <param name="propertyExpression">下拉列表框的属性。依此确定下拉列表框的名称以及当前选中项的值。</param>
+            <param name="sourceEntityExpression">指定数据来源实体类型，lambda表达式。为外键导航属性，形如：model=>model.NavigationProperty。</param>
+            <param name="insertDefaultOption">是否在选项之前插入一条默认选项，如：“-请选择-”。缺省值为true。</param>
+            <param name="defaultOptionText">插入默认选项的显示文字，缺省值为空。insertDefaultOption为true时，有效。</param>
+            <param name="defaultOptionValue">插入默认选项的值，缺省值为字符串"0"。insertDefaultOption为true时，有效。</param>
+            <returns></returns>   
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SelectListFor``5(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``2,``3}},System.Linq.Expressions.Expression{System.Func{``2,``4}},System.Boolean,System.String,System.String)">
+            <summary>
+            （自定义）Html扩展方法，生成下拉列表框。
+            <para>  下拉列表框的值属性：指定。</para>
+            <para>  下拉列表框的显示属性：指定。</para> 
+            <para>  数据源：数据表全部数据。</para>
+            <para>  排序方式：按主键升序排序。</para>
+            </summary>
+            <typeparam name="TPageModel">实体类型，通常为页面强类型。</typeparam>
+            <typeparam name="TProperty">属性类型。</typeparam>
+            <typeparam name="TSourceDataModel">下拉列表框数据来源的实体类型。</typeparam>
+            <typeparam name="TBindValueProperty">绑定至下拉列表框的值属性类型。</typeparam>
+            <typeparam name="TBindTextProperty">绑定至下拉列表框的显示属性类型。</typeparam>
+            <param name="html"></param>
+            <param name="propertyExpression">下拉列表框的属性。依此确定下拉列表框的名称以及当前选中项的值。</param>
+            <param name="sourceEntityExpression">指定数据来源实体类型，lambda表达式。为外键导航属性，形如：model=>model.NavigationProperty。</param>
+            <param name="bindValuePropertyExpression">绑定至下拉列表框的值属性表达式。</param>
+            <param name="bindTextPropertyExpression">绑定至下拉列表框的显示属性的表达式。</param>
+            <param name="insertDefaultOption">是否在选项之前插入一条默认选项，如：“-请选择-”。缺省值为true。</param>
+            <param name="defaultOptionText">插入默认选项的显示文字，缺省值为空。insertDefaultOption为true时，有效。</param>
+            <param name="defaultOptionValue">插入默认选项的值，缺省值为字符串"0"。insertDefaultOption为true时，有效。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SelectListFor``3(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``2,System.Boolean}},System.Func{System.Linq.IQueryable{``2},System.Linq.IOrderedQueryable{``2}},System.Boolean,System.String,System.String)">
+            <summary>
+            （自定义）Html扩展方法，生成下拉列表框。
+            <para>  下拉列表框的值属性：自动匹配。第一缺省值为带有[SelectListValueProperty]标识的属性，第二缺省值为带有[Key]标识的属性，第三缺省值为“id”，第四缺省值为“类型名称Id”。</para>
+            <para>  下拉列表框的显示属性：自动匹配。第一缺省值为带有[SelectListTextProperty]标识的属性，第二缺省值为“name”，第三缺省值为“类型名称name”。</para> 
+            <para>  数据源：可指定查询条件。</para>
+            <para>  排序方式：可指定。</para>
+            </summary>
+            <typeparam name="TPageModel">实体类型，通常为页面强类型。</typeparam>
+            <typeparam name="TProperty">属性类型。</typeparam>
+            <typeparam name="TSourceDataModel">下拉列表框数据来源的实体类型。</typeparam>
+            <param name="html"></param>
+            <param name="propertyExpression">下拉列表框的属性。依此确定下拉列表框的名称以及当前选中项的值。</param>
+            <param name="sourceEntityExpression">指定数据来源实体类型，lambda表达式。为外键导航属性，形如：model=>model.NavigationProperty。</param>
+            <param name="filter">下拉列表框数据源的谓词筛选值，如：t=>t.Property==value。</param>
+            <param name="orderBy">下拉列表框数据源的排序依据和方式，如：p=>p.OrderBy(t=>t.Property1).ThenBy(t=>t.Property2)。</param>
+            <param name="insertDefaultOption">是否在选项之前插入一条默认选项，如：“-请选择-”。缺省值为true。</param>
+            <param name="defaultOptionText">插入默认选项的显示文字，缺省值为空。insertDefaultOption为true时，有效。</param>
+            <param name="defaultOptionValue">插入默认选项的值，缺省值为字符串"0"。insertDefaultOption为true时，有效。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SelectListFor``5(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``2,``3}},System.Linq.Expressions.Expression{System.Func{``2,``4}},System.Linq.Expressions.Expression{System.Func{``2,System.Boolean}},System.Func{System.Linq.IQueryable{``2},System.Linq.IOrderedQueryable{``2}},System.Boolean,System.String,System.String)">
+            <summary>
+            （自定义）Html扩展方法，生成下拉列表框。
+            <para>  下拉列表框的值属性：指定。</para>
+            <para>  下拉列表框的显示属性：指定。</para> 
+            <para>  数据源：可指定查询条件。</para>
+            <para>  排序方式：可指定。</para>
+            </summary>
+            <typeparam name="TPageModel">实体类型，通常为页面强类型。</typeparam>
+            <typeparam name="TProperty">属性类型。</typeparam>
+            <typeparam name="TSourceDataModel">下拉列表框数据来源的实体类型。</typeparam>
+            <typeparam name="TBindValueProperty">绑定至下拉列表框的值属性类型。</typeparam>
+            <typeparam name="TBindTextProperty">绑定至下拉列表框的显示属性类型。</typeparam>
+            <param name="html"></param>
+            <param name="propertyExpression">下拉列表框的属性。依此确定下拉列表框的名称以及当前选中项的值。</param>
+            <param name="sourceEntityExpression">指定数据来源实体类型，lambda表达式。为外键导航属性，形如：model=>model.NavigationProperty。</param>
+            <param name="bindValuePropertyExpression">绑定至下拉列表框的值属性表达式。</param>
+            <param name="bindTextPropertyExpression">绑定至下拉列表框的显示属性的表达式。</param>
+            <param name="filter">下拉列表框数据源的谓词筛选值，如：t=>t.Property==value。</param>
+            <param name="orderBy">下拉列表框数据源的排序依据和方式，如：p=>p.OrderBy(t=>t.Property1).ThenBy(t=>t.Property2)。</param>
+            <param name="insertDefaultOption">是否在选项之前插入一条默认选项，如：“-请选择-”。缺省值为true。</param>
+            <param name="defaultOptionText">插入默认选项的显示文字，缺省值为空。insertDefaultOption为true时，有效。</param>
+            <param name="defaultOptionValue">插入默认选项的值，缺省值为字符串"0"。insertDefaultOption为true时，有效。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.SelectListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.String,System.String)">
+            <summary>
+            （自定义）Html扩展方法，枚举类型生成下拉列表框。
+            <para>  下拉列表框的值属性：枚举类型的值</para>
+            <para>  下拉列表框的显示属性：枚举类型的名称</para> 
+            </summary>
+            <typeparam name="TPageModel">实体类型，通常为页面强类型。</typeparam>
+            <typeparam name="TEnum">枚举类型。</typeparam>
+            <param name="html"></param>
+            <param name="propertyExpression">下拉列表框的属性。依此确定下拉列表框的名称以及当前选中项的值。</param>
+            <param name="insertDefaultOption">是否在选项之前插入一条默认选项，如：“-请选择-”。缺省值为true。</param>
+            <param name="defaultOptionText">插入默认选项的显示文字，缺省值为空。insertDefaultOption为true时，有效。</param>
+            <param name="defaultOptionValue">插入默认选项的值，缺省值为字符串"0"。insertDefaultOption为true时，有效。</param>
+            <returns></returns>   
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHelpers.RenderMenu``1(System.Web.Mvc.HtmlHelper{``0},System.Collections.Generic.List{System.Web.Mvc.PageInfo},System.Collections.Generic.Dictionary{System.String,System.Boolean})">
+            <summary>
+            绘制菜单
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <param name="html"></param>
+            <param name="siteDirectories">站点目录的封装集合</param>
+            <param name="accessDictionary">所有访问权限字典</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.OperationParam">
+            <summary>
+            （自定义）页面操作封装类
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OperationParam.OpType">
+            <summary>
+            操作类型。OperationType枚举
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OperationParam.OpArgument">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OperationParam.OpPager">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OperationParam.OpSortProperty">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OperationParam.OpSortDirection">
+            <summary>
+            排序方向。OrderDirection枚举
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.OperationParam.OpQueryString">
+            <summary>
+            查询条件序列化字符串
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.OperationParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.OperationParam.#ctor(System.String,System.Web.Helpers.SortDirection,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pageIndex">当前页码</param>
+            <param name="sortProperty">排序属性名称，缺省值为升序</param>
+            <param name="sortDirection">排序方向，SortDirection枚举</param>
+        </member>
+        <member name="M:System.Web.Mvc.OperationParam.Reset(System.Web.Mvc.ModelStateDictionary)">
+            <summary>
+            重置操作参数文本框的值
+            </summary>
+            <param name="modelState"></param>
+        </member>
+        <member name="T:System.Web.Mvc.OperationType">
+            <summary>
+            （自定义）列表页提交表单的操作类型
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.Null">
+            <summary>
+            未填写，默认值
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.Pager">
+            <summary>
+            翻页
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.Query">
+            <summary>
+            查询
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.Deletes">
+            <summary>
+            批量删除
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.ShowAll">
+            <summary>
+            显示全部
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.OperationType.RankUp">
+            <summary>
+            调整排序
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Pager">
+            <summary>
+            （自定义）页码封装类
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Pager.DataCount">
+            <summary>
+            数据记录总数
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Pager.PageSize">
+            <summary>
+            每页显示记录数，缺省值在web.config中定义
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Pager.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Pager.PageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Pager.PagerNumberCount">
+            <summary>
+            显示出的页码数目，超出时显示为...
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Pager.#ctor(System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dataCount">数据记录总数</param>
+            <param name="pageIndex">当前页码</param>
+            <param name="pageSize">每页显示记录数，为null时，取web.config中定义的缺省值</param>
+            <param name="pagerNumberCount">显示出的页码数目，缺省值为8</param>
+        </member>
+        <member name="T:System.Web.Mvc.QueryHelper">
+            <summary>
+            （自定义）查询对话框的辅助方法
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.QueryHelper.QueryCondition">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.QueryHelper.QueryLogic">
+            <summary>
+            多条件查询间逻辑关系
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.QueryHelper.QueryItem">
+            <summary>
+            查询项封装类
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.QueryHelper.QueryItemClient">
+            <summary>
+            封装客户端提交的查询条件
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.QueryHelper.RenderQuery(System.Type,System.String,System.String)">
+            <summary>
+            生成查询对话框的html代码
+            </summary>
+            <param name="type">实体类型</param>
+            <param name="queryString">json格式的查询字符串</param>
+            <param name="excludeProperties">排除的属性，多个属性以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.QueryHelper.ExecuteQuery``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            执行查询
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="datas">IQueryable集合的数据源</param>
+            <param name="queryString">json格式的查询字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.SelectListHelper">
+            <summary>
+            （自定义）SelectList辅助类。
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.SelectListHelper.GetSelectListValuePropertyInfo(System.Type,System.String)">
+            <summary>
+            获取下拉列表框的值属性信息。
+            </summary>
+            <param name="classType">实体类型。</param>
+            <param name="valuePropertyName">值属性的名称，不区分大小写。若为null，则第一缺省值为带有[SelectListValueProperty]标识的属性，第二缺省值为带有[Key]标识的属性，第三缺省值为“id”，第四缺省值为“类型名称Id”。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.SelectListHelper.GetSelectListTextPropertyInfo(System.Type,System.String)">
+            <summary>
+            获取下拉列表框的显示属性信息。
+            </summary>
+            <param name="classType">实体类型。</param>
+            <param name="textPropertyName">显示属性的名称，不区分大小写。若为null，则第一缺省值为带有[SelectListTextProperty]标识的属性，第二缺省值为“name”，第三缺省值为“类型名称name”。</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.SelectListHelper.GetSelectListItems``1(System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}})">
+            <summary>
+            获取下拉列表框的选项集合。
+            <para>  返回System.Web.Mvc.SelectListItem集合。</para>
+            </summary>
+            <typeparam name="TEntity">下拉列表框数据源实体类型。</typeparam>
+            <param name="valueProperty">绑定至下拉列表框的值属性信息。</param>
+            <param name="textProperty">绑定至下拉列表框的显示属性信息。</param>
+            <param name="selectedValue">当前选中项的值。缺省值为字符串"0"。</param>
+            <param name="filter">下拉列表框数据源的谓词筛选值，如：t=>t.Property==value。缺省值为null</param>
+            <param name="orderBy">下拉列表框数据源的排序依据和方式，如：p=>p.OrderBy(t=>t.Property1).ThenBy(t=>t.Property2)。缺省值为null</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.SelectListHelper.GetEnumSelectListItems(System.Type,System.String)">
+            <summary>
+            获取枚举类型的下拉列表框选项集合。
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="selectedValue">当前选中项的显示值。缺省值为空字符串：""</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.DirectoryType">
+            <summary>
+            （自定义）目录类型
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.DirectoryType.Area">
+            <summary>
+            区域
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.DirectoryType.Controller">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.DirectoryType.Action">
+            <summary>
+            页面
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.PageInfo">
+            <summary>
+            （自定义）网站页面封装类，数据来源于网站目录XML文件。
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.DirectoryType">
+            <summary>
+            页面节点的类型
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Id">
+            <summary>
+            页面节点的id，用在html页面中的元素中
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Name">
+            <summary>
+            页面节点name，对应Area、Controller或者Action的名称
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.NameCn">
+            <summary>
+            页面节点的namecn，用于权限管理时的显示名称
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Url">
+            <summary>
+            页面的url。只针对Action类型的节点。Controller类型的节点会自动生成一个缺省的Action
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Title">
+            <summary>
+            页面的标题，用于页面标签显示
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.CategoryId">
+            <summary>
+            页面对应数据库表所属的分类ID，即同一数据表分为两块管理。用于Controller中缺省的Action
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Level">
+            <summary>
+            节点的深度
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.IsDefaultAction">
+            <summary>
+            是否是缺省的页面
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Parent">
+            <summary>
+            父页面
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.PageInfo.Children">
+            <summary>
+            所有子页面
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.PageInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.SiteDirectory">
+            <summary>
+            （自定义）封装站点目录，数据来源于网站目录XML文件。
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.SiteDirectory.Load">
+            <summary>
+            封装站点目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:System.Web.Mvc.SiteDirectory.All">
+            <summary>
+            获取所有网页信息，来源于Application对象。
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.SiteDirectory.GetPageInfo(System.String)">
+            <summary>
+            根据网站目录节点id获取节点网页信息，来源于Application对象。
+            </summary>
+            <param name="directoryId">网站目录节点id</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.NonQueryAttribute">
+            <summary>
+            （自定义）不参与查询的标识。
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.AssociatedQueryAttribute">
+            <summary>
+            （自定义）外键关联查询的标记。
+            <para>  Config文件中设置该标识是加在外键属性上还是导航属性上。</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.AssociatedQueryAttribute.#ctor">
+            <summary>
+            构造函数。
+            <para>  展现形式：下拉列表框。</para>
+            <para>  关联深度：一级。</para>
+            <para>  查询项的显示名称：自动匹配。</para>
+            <para>  下拉列表框的value值对应的属性：自动匹配。</para>
+            <para>  下拉列表框的显示值对应的属性：自动匹配。</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.AssociatedQueryAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            <para>  展现形式：下拉列表框。</para>
+            <para>  关联深度：多级。</para>
+            <para>  查询项的显示名称：显式指定。</para>
+            <para>  下拉列表框的value值对应的属性：显式指定。</para>
+            <para>  下拉列表框的显示值对应的属性：显式指定。</para>
+            </summary>
+            <param name="DisplayName">查询项的显示名称。</param>
+            <param name="ValueFieldName">下拉列表框的value值对应的属性，大小写不区分。多级关联查询时，必须写明完整的属性名称，如：Clas.College.Id。</param>
+            <param name="TextFieldName">下拉列表框的显示值对应的属性，大小写不区分。多级关联查询时，必须写明完整的属性名称，如：Clas.College.Name。</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.AssociatedQueryAttribute.#ctor(System.ComponentModel.DataAnnotations.QueryPropertyType,System.String,System.String)">
+            <summary>
+            构造函数。
+            <para>  展现形式：显式指定，非下拉列表框。</para>
+            <para>  关联深度：多级。</para>
+            <para>  查询项的显示名称：显式指定。</para>
+            </summary>
+            <param name="QueryPropertyType">QueryPropertyType枚举值，关联查询体现形式，不能为QueryPropertyType.Select。</param>
+            <param name="AssociatedPropertyName">关联的属性名称，不区分大小写。多级关联查询时，必须写明完整的属性名称，如：Clas.College.Name。</param>
+            <param name="DisplayName">查询项的显示名称。</param>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.QueryPropertyType">
+            <summary>
+            （自定义）查询字段的类型。
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.Numerical">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.DateTime">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.Boolean">
+            <summary>
+            逻辑
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.Select">
+            <summary>
+            下拉列表框选择
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.QueryPropertyType.Enum">
+            <summary>
+            枚举
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.SelectListValuePropertyAttribute">
+            <summary>
+            （自定义）生成下拉列表框的值字段
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.SelectListTextPropertyAttribute">
+            <summary>
+            （自定义）生成下拉列表框的显示字段
+            </summary>
+        </member>
+        <member name="T:System.Config">
+            <summary>
+            获取Web.config文件中的appSettings
+            </summary>
+        </member>
+        <member name="P:System.Config.AssociatedQueryAttributeAddedOnForeignKey">
+            <summary>
+            外键表联合查询时，AssociatedQuery标识是否加在外键成员上
+            </summary>
+        </member>
+        <member name="P:System.Config.PageSize">
+            <summary>
+            列表页每页显示数据条数
+            </summary>
+        </member>
+        <member name="P:System.Config.SiteDirectoryPath">
+            <summary>
+            站点目录XML文件所放路径（相对路径）
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.IDbContext">
+            <summary>
+            （自定义）数据库上下文接口。
+            <para>  实际项目中的数据库上下文必须继承此接口，以便依赖注入。</para>
+            </summary>
+        </member>
+        <member name="T:System.Linq.IQueryableExtensionMethods">
+            <summary>
+            IQueryable&lt;T&gt;的扩展方法 分页相关
+            </summary>
+        </member>
+        <member name="M:System.Linq.IQueryableExtensionMethods.GetPageData``1(System.Linq.IQueryable{``0},System.Web.Mvc.Pager)">
+            <summary>
+            （自定义）查询IQueryable&lt;TEntity&gt;实体集的指定页面数据。
+            </summary>
+            <typeparam name="TEntity">实体类型。</typeparam>
+            <param name="query">IQueryable&lt;TEntity&gt;实体集。</param>
+            <param name="pager">封装的页码信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.ReturnType">
+            <summary>
+            Action的操作状态
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.Invalid">
+            <summary>
+            数据验证错误
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.NotLogin">
+            <summary>
+            未登录
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.NoPermission">
+            <summary>
+            未授权
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.Failure">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.CreateSuccess">
+            <summary>
+            添加成功
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.EditSuccess">
+            <summary>
+            更新成功
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.DeleteSuccess">
+            <summary>
+            删除成功
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.DeletesSuccess">
+            <summary>
+            批量删除成功
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.RankUpSuccess">
+            <summary>
+            调整排序成功
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.CreateFailure">
+            <summary>
+            添加失败
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.EditFailure">
+            <summary>
+            更新失败
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.DeleteFailure">
+            <summary>
+            删除失败
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.DeletesFailure">
+            <summary>
+            批量删除失败
+            </summary>
+        </member>
+        <member name="F:System.ReturnType.RankUpFailure">
+            <summary>
+            调整排序失败
+            </summary>
+        </member>
+        <member name="T:System.ReturnValue">
+            <summary>
+            Action返回值的封装类型
+            <para>可用于Ajax访问方法反馈结果</para>
+            </summary>
+        </member>
+        <member name="P:System.ReturnValue.Type">
+            <summary>
+            操作结果类型
+            </summary>
+        </member>
+        <member name="P:System.ReturnValue.Message">
+            <summary>
+            操作结果提示
+            </summary>
+        </member>
+        <member name="P:System.ReturnValue.Data">
+            <summary>
+            操作结果携带数据
+            </summary>
+        </member>
+        <member name="M:System.ReturnValue.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:System.ReturnValue.#ctor(System.ReturnType,System.String,System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="type">操作结果类型</param>
+            <param name="message">操作结果提示</param>
+            <param name="data">操作结果携带数据</param>
+        </member>
+        <member name="M:System.ReturnValue.ToJson">
+            <summary>
+            将返回值序列化为Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:System.SecurityHelper">
+            <summary>
+            （自定义）安全相关
+            </summary>
+        </member>
+        <member name="M:System.SecurityHelper.MD5Hash(System.String)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="plaintext">明文</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Practices.Unity.UnityBootstrapper">
+            <summary>
+            （自定义）ASP.NET MVC的Unity依赖注入。
+            <para>  由系统自动调用其Start和Shutdown方法</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Unity.UnityBootstrapper.Start">
+            <summary>Integrates Unity when the application starts.</summary>
+        </member>
+        <member name="M:Microsoft.Practices.Unity.UnityBootstrapper.Shutdown">
+            <summary>Disposes the Unity container when the application is shut down.</summary>
+        </member>
+        <member name="T:Microsoft.Practices.Unity.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.Unity.UnityConfig.Container">
+            <summary>
+            获取依赖注入容器
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.Unity.UnityConfig.RegisterTypes(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>Registers the type mappings with the Unity container.</summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>There is no need to register concrete types such as controllers or API controllers (unless you want to 
+            change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.</remarks>
+        </member>
+    </members>
+</doc>
