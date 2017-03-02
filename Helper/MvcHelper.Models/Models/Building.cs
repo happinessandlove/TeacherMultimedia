@@ -14,8 +14,9 @@ namespace Models
         {
             this.Classrooms = new List<ClassRoom>();
         }
+        [SelectListValueProperty]
         public Guid Id { get; set; }
-        [DisplayName("楼号"), MyRequired, MaxLength(10)]
+        [DisplayName("楼号"), MyRequired, MaxLength(10),SelectListTextProperty]
         public string Number { get; set; }
 
         #region 导航属性=====================================================================================

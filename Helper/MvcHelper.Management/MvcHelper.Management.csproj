@@ -365,6 +365,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Default\" />
+    <Folder Include="Views\UseDevice\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

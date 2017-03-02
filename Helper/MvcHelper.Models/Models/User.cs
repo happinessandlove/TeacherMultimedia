@@ -26,7 +26,7 @@ namespace Models
         #endregion===========================================================================================
 
         [DisplayName("登录账号"), MyRequired, MyMaxLength(10)]
-        public string LoginName { get; set; }
+        public string LoginName  { get; set; }
 
         [DisplayName("密码"),MyRequired, MyMaxLength(50),DataType(DataType.Password)]
         public string Password { get; set; }
