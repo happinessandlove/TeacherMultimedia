@@ -11,7 +11,7 @@ namespace Models
 {
     public class ClassRoom
     {
-        
+        [SelectListValueProperty]
         public Guid Id { get; set; }
         [DisplayName("教室号"), MyRequired, MaxLength(10),SelectListTextProperty]
         public string Number { get; set; }
