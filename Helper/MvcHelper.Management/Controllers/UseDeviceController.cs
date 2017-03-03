@@ -9,9 +9,6 @@ namespace MvcHelper.Management.Controllers
     public class UseDeviceController : Controller
     {
         // GET: UseDevice
-        public ActionResult Index()
-        {
-            return View();
-        }
+       
     }
 }
