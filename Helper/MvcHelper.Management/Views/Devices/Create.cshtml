@@ -1,17 +1,20 @@
+﻿@@ -1,95 +0,0 @@
 ﻿@model Device
 @{
     Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
     string pageId = ViewBag.PageId;
     PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
     PageInfo indexPage = pageInfo.Parent.Children.FirstOrDefault(s => s.Name == "Index");
-	User loginUser = ViewBag.LoginUser;
+    User loginUser = ViewBag.LoginUser;
     ViewBag.Pid = pageInfo.Id;
     ViewBag.Pclass = pageInfo.Name;
 }
 @section Style
 {
     <style type="text/css">
-        .form-key { width: 140px; }
+        .form-key {
+            width: 140px;
+        }
     </style>
 }
 @section ScriptHeader
@@ -47,46 +50,46 @@
                     </tr>
                 </thead>*@
             @*<thead>
-            <tr>
-                <th colspan="2">
-                    提示1<br/>
-                    提示2
-                </th>
-            </tr>
-        </thead>*@
+                    <tr>
+                        <th colspan="2">
+                            提示1<br/>
+                            提示2
+                        </th>
+                    </tr>
+                </thead>*@
             <tbody>
-				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.ClassRoom.Building.Number, 4)</td>
-					<td class="form-value">@Html.SelectListFor(model => model.ClassRoom.BuildingId, model => model.ClassRoom.Building)&nbsp;@Html.ValidationMessageFor(model => model.ClassRoom.BuildingId)</td>
-				</tr>
-				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.ClassRoom.Number, 4)</td>
-					<td class="form-value">@Html.EditorFor(model => model.ClassRoom.Number)&nbsp;@Html.ValidationMessageFor(model => model.ClassRoom.Number)</td>
-				</tr>
+                <tr>
+                    <td class="form-key">@Html.DisplayNameFor(model => model.ClassRoom.Building.Number, 4)</td>
+                    <td class="form-value">@Html.SelectListFor(model => model.ClassRoom.BuildingId, model => model.ClassRoom.Building)&nbsp;@Html.ValidationMessageFor(model => model.ClassRoom.BuildingId)</td>
+                </tr>
+                <tr>
+                    <td class="form-key">@Html.DisplayNameFor(model => model.ClassRoom.Number, 4)</td>
+                    <td class="form-value">@Html.EditorFor(model => model.ClassRoom.Number)&nbsp;@Html.ValidationMessageFor(model => model.ClassRoom.Number)</td>
+                </tr>
                 <tr>
                     <td class="form-key">@Html.DisplayNameFor(model => model.Number, 4)</td>
                     <td class="form-value">@Html.EditorFor(model => model.Number)&nbsp;@Html.ValidationMessageFor(model => model.Number)</td>
                 </tr>
-				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.AddTime, 4)</td>
-					<td class="form-value">@Html.EditorFor(model => model.AddTime)&nbsp;@Html.ValidationMessageFor(model => model.AddTime)</td>
-				</tr>
-				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.AddName, 4)</td>
-					<td class="form-value">@Html.EditorFor(model => model.AddName)&nbsp;@Html.ValidationMessageFor(model => model.AddName)</td>
-				</tr>
-				
-				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.Remark, 4)</td>
-					<td class="form-value">@Html.EditorFor(model => model.Remark)&nbsp;@Html.ValidationMessageFor(model => model.Remark)</td>
-				</tr>
+                <tr>
+                    <td class="form-key">@Html.DisplayNameFor(model => model.AddTime, 4)</td>
+                    <td class="form-value">@Html.EditorFor(model => model.AddTime)&nbsp;@Html.ValidationMessageFor(model => model.AddTime)</td>
+                </tr>
+                <tr>
+                    <td class="form-key">@Html.DisplayNameFor(model => model.AddName, 4)</td>
+                    <td class="form-value">@Html.EditorFor(model => model.AddName)&nbsp;@Html.ValidationMessageFor(model => model.AddName)</td>
+                </tr>
+
+                <tr>
+                    <td class="form-key">@Html.DisplayNameFor(model => model.Remark, 4)</td>
+                    <td class="form-value">@Html.EditorFor(model => model.Remark)&nbsp;@Html.ValidationMessageFor(model => model.Remark)</td>
+                </tr>
             </tbody>
         </table>
     </div>
 }
 @section ScriptFooter
 {
-	@Scripts.Render("~/scripts/jquery-validate")
+    @Scripts.Render("~/scripts/jquery-validate")
     <script type="text/javascript" language="javascript">
         $(function ()
         {
