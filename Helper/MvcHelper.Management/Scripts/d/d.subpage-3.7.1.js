@@ -285,7 +285,7 @@ var Subpage = function (param)
         {
             if (submitButton.attr(o.customPreEventName))
                 if (!(eval(submitButton.attr(o.customPreEventName)))()) return false;
-            Fw.ShowProgress(pageId);
+            //Fw.ShowProgress(pageId);
             //if (typeof editor!='undefined') editor.sync();
             form[0].submit();
         }

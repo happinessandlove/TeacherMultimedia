@@ -13,7 +13,7 @@ using Models;
 
 namespace MvcHelper.Management.Controllers
 {
-    public class DevicesController : Controller
+    public class ClassRoomManageController : Controller
     {
         private DbEntity db = new DbEntity();
         protected override void Dispose(bool disposing)
@@ -32,14 +32,14 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Index_Device"; //站点目录中的id属性值
+            string pageId = "Index_ClassRoom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
 
             #region 翻页、查询、排序、显示全部、移动、删除
             ReturnValue returnValue = new ReturnValue();
-            Device deleteData = null;
+            ClassRoom deleteData = null;
             switch (op.OpType)
             {
                 case OperationType.Pager: break;
@@ -48,7 +48,7 @@ namespace MvcHelper.Management.Controllers
                 case OperationType.ShowAll: break;
                 case OperationType.RankUp: break;
                 case OperationType.Delete:
-                    deleteData = db.Devices.Find(Guid.Parse(op.OpArgument));
+                    deleteData = db.ClassRooms.Find(Guid.Parse(op.OpArgument));
                     if (deleteData == null)
                     {
                         returnValue.Type = ReturnType.DeleteFailure;
@@ -58,7 +58,7 @@ namespace MvcHelper.Management.Controllers
                     {
 						try
 						{
-							db.Devices.Remove(deleteData);
+							db.ClassRooms.Remove(deleteData);
 							db.SaveChanges();
 							returnValue.Type = ReturnType.DeleteSuccess;
 							returnValue.Message = ResultMessage.DeleteSuccess;
@@ -77,9 +77,9 @@ namespace MvcHelper.Management.Controllers
 					bool success = true;
                     foreach (string id in ids)
                     {
-                        deleteData = db.Devices.Find(Guid.Parse(id));
+                        deleteData = db.ClassRooms.Find(Guid.Parse(id));
                         if (deleteData == null) continue;
-                        else db.Devices.Remove(deleteData);
+                        else db.ClassRooms.Remove(deleteData);
 						try
 						{
 							db.SaveChanges();
@@ -105,18 +105,18 @@ namespace MvcHelper.Management.Controllers
             }
             #endregion
 
-            IQueryable<Device> datas = QueryHelper.ExecuteQuery(db.Devices, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句
+            IQueryable<ClassRoom> datas = QueryHelper.ExecuteQuery(db.ClassRooms, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句
             Pager pager = new Pager(datas.Count(), op.OpPager, null); //页码相关对象
             ViewBag.Pager = pager;
-            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "AddTime"; op.OpSortDirection = SortDirection.Descending; }//首次打开页面的初始排序依据及方向 <需修改>
-            IList<Device> devices = datas
-				.Include(s => s.ClassRoom) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "xxxxx"; op.OpSortDirection = SortDirection.Ascending; }//首次打开页面的初始排序依据及方向 <需修改>
+            IList<ClassRoom> classRooms = datas
+				.Include(s => s.Building).Include(s => s.Device) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
 				.Sort(op.OpSortProperty, op.OpSortDirection) //排序
 				.GetPageData(pager) //选择当前页的数据
 				.ToList(); //执行查询
             ViewBag.OperationParam = op;
             ViewBag.ReturnValue = returnValue.ToJson();
-            return View(devices);
+            return View(classRooms);
         }
         #endregion		
 
@@ -131,15 +131,15 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Details_Device"; //站点目录中的id属性值
+            string pageId = "Details_ClassRoom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
 
 			if(id == null) return HttpNotFound();
-            Device device = db.Devices.Include(s => s.ClassRoom).FirstOrDefault(s => s.ClassRoomId == id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
-            if (device == null) return HttpNotFound();
-            return View(device);
+            ClassRoom classRoom = db.ClassRooms.Include(s => s.Building).Include(s => s.Device).FirstOrDefault(s => s.Id == id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+            if (classRoom == null) return HttpNotFound();
+            return View(classRoom);
         }
         #endregion
 
@@ -154,7 +154,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Create_Device"; //站点目录中的id属性值
+            string pageId = "Create_ClassRoom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -168,7 +168,7 @@ namespace MvcHelper.Management.Controllers
 		//防止“过多发布”攻击，启用指定绑定到特定属性的功能
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClassRoomId,Number,AddTime,AddName,State,Remark")] Device device)
+        public ActionResult Create([Bind(Include = "Id,Number,BuildingId")] ClassRoom classRoom)
         {
             #region 验证登录
             User loginUser = AccountHelper.LoginUser;
@@ -177,7 +177,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Create_Device"; //站点目录中的id属性值
+            string pageId = "Create_ClassRoom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -189,11 +189,13 @@ namespace MvcHelper.Management.Controllers
             ReturnValue returnValue = new ReturnValue();
             if (ModelState.IsValid)
             {
-                
+                #region 特殊数据验证 <不需要验证则注释或删除>
+               
+                #endregion
                 try
                 {
-                    device.ClassRoomId = Guid.NewGuid();
-                    db.Devices.Add(device);
+                    classRoom.Id = Guid.NewGuid();
+                    db.ClassRooms.Add(classRoom);
                     db.SaveChanges();
                     ModelState.Clear();
                     returnValue.Type = ReturnType.CreateSuccess;
@@ -206,13 +208,13 @@ namespace MvcHelper.Management.Controllers
                     returnValue.Type = ReturnType.CreateFailure;
                     returnValue.Message = ResultMessage.CreateFailure;
                     ViewBag.ReturnValue = returnValue.ToJson();
-                    return View(device);
+                    return View(classRoom);
                 }
             }
             #endregion
 
             ViewBag.ReturnValue = returnValue.ToJson();
-            return View(device);
+            return View(classRoom);
         }
         #endregion
 
@@ -227,7 +229,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Edit_Device"; //站点目录中的id属性值
+            string pageId = "Edit_ClassRoom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -236,15 +238,15 @@ namespace MvcHelper.Management.Controllers
 			#endregion
 			
 			if(id == null) return HttpNotFound();
-            Device device = db.Devices.Include(s => s.ClassRoom).FirstOrDefault(s => s.ClassRoomId == id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
-            if (device == null) return HttpNotFound();
-            return View(device);
+            ClassRoom classRoom = db.ClassRooms.Include(s => s.Building).Include(s => s.Device).FirstOrDefault(s => s.Id == id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+            if (classRoom == null) return HttpNotFound();
+            return View(classRoom);
         }
 		
 		//防止“过多发布”攻击，启用指定绑定到特定属性的功能
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClassRoomId,Number,AddTime,AddName,State,Remark")] Device device)
+        public ActionResult Edit([Bind(Include = "Id,Number,BuildingId")] ClassRoom classRoom)
         {
             #region 验证登录
             User loginUser = AccountHelper.LoginUser;
@@ -253,7 +255,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Edit_Device"; //站点目录中的id属性值
+            string pageId = "Edit_ClassRoom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -265,17 +267,19 @@ namespace MvcHelper.Management.Controllers
             #region 编辑
             if (ModelState.IsValid)
             {
-                
+                #region 特殊数据验证 <不需要验证则注释或删除>
+               
+                #endregion
                 try
                 {
-                    db.Entry(device).State = EntityState.Modified;
+                    db.Entry(classRoom).State = EntityState.Modified;
                     db.SaveChanges();
                     returnValue.Type = ReturnType.EditSuccess;
                     returnValue.Message = ResultMessage.EditSuccess;
                 }
                 catch
                 {
-                    db.Entry(device).State = EntityState.Unchanged;
+                    db.Entry(classRoom).State = EntityState.Unchanged;
                     returnValue.Type = ReturnType.EditFailure;
                     returnValue.Message = ResultMessage.EditFailure;
                 }
@@ -283,10 +287,10 @@ namespace MvcHelper.Management.Controllers
             #endregion
 			
             //针对需要显示导航属性的情形，重新查询数据库
-            //device = db.Devices.Include(s => s.ClassRoom).FirstOrDefault(s => s.ClassRoomId == device.ClassRoomId); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+            //classRoom = db.ClassRooms.Include(s => s.Building).Include(s => s.Device).FirstOrDefault(s => s.Id == classRoom.Id); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
 
             ViewBag.ReturnValue = returnValue.ToJson();
-            return View(device);
+            return View(classRoom);
         }
         #endregion
 
@@ -295,7 +299,7 @@ namespace MvcHelper.Management.Controllers
 		//	public JsonResult CheckXxxx(string value)
 		//	{
 		//		ReturnValue returnValue = new ReturnValue();
-		//		int count = db.Devices.Where(s => s.Name == value).Count();
+		//		int count = db.ClassRooms.Where(s => s.Name == value).Count();
 		//		if (count == 0)
 		//		{
 		//			returnValue.Type = ReturnType.Success;

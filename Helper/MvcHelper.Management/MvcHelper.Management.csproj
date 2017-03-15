@@ -150,6 +150,12 @@
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ZYSocketFrame">
+      <HintPath>C:\Users\liuming\Desktop\ZYSocketFrame.dll</HintPath>
+    </Reference>
+    <Reference Include="ZYSocketShare">
+      <HintPath>C:\Users\liuming\Desktop\ZYSocketShare.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_GlobalResources\ErrorMessage_zh_CN.Designer.cs">
@@ -170,7 +176,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Empty.cs.t4</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\DevicesController.cs" />
+    <Compile Include="Controllers\BuildingManageController.cs" />
+    <Compile Include="Controllers\ClassRoomManageController.cs" />
+    <Compile Include="Controllers\DeviceManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonalUserController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
@@ -358,15 +366,25 @@
     <Content Include="Views\PersonalUser\Details.cshtml" />
     <Content Include="Views\PersonalUser\Edit.cshtml" />
     <Content Include="Views\PersonalUser\ModifyPwd.cshtml" />
-    <Content Include="Views\Devices\Create.cshtml" />
-    <Content Include="Views\Devices\Delete.cshtml" />
-    <Content Include="Views\Devices\Details.cshtml" />
-    <Content Include="Views\Devices\Edit.cshtml" />
-    <Content Include="Views\Devices\Index.cshtml" />
+    <Content Include="Views\UseDevice\Index.cshtml" />
+    <Content Include="Views\BuildingManage\Create.cshtml" />
+    <Content Include="Views\BuildingManage\Delete.cshtml" />
+    <Content Include="Views\BuildingManage\Details.cshtml" />
+    <Content Include="Views\BuildingManage\Edit.cshtml" />
+    <Content Include="Views\BuildingManage\Index.cshtml" />
+    <Content Include="Views\ClassRoomManage\Create.cshtml" />
+    <Content Include="Views\ClassRoomManage\Delete.cshtml" />
+    <Content Include="Views\ClassRoomManage\Details.cshtml" />
+    <Content Include="Views\ClassRoomManage\Edit.cshtml" />
+    <Content Include="Views\ClassRoomManage\Index.cshtml" />
+    <Content Include="Views\DeviceManage\Create.cshtml" />
+    <Content Include="Views\DeviceManage\Delete.cshtml" />
+    <Content Include="Views\DeviceManage\Details.cshtml" />
+    <Content Include="Views\DeviceManage\Edit.cshtml" />
+    <Content Include="Views\DeviceManage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\UseDevice\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

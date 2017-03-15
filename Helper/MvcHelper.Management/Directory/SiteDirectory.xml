@@ -6,8 +6,28 @@
 <!--categoryid：    仅限于展现列表页的Action，多个Controller使用同一数据表时，区分它们的分类Id-->
 <!--title：         菜单、页面标签的显示名称-->
 <Site>
+  <Area name="" namecn="楼宇管理" id="BuildingManage" title="楼宇管理">
+    <Controller name="BuildingManage" namecn="楼宇管理" id="BuildingManage" title="楼宇管理">
+      <Action defaultAction="true" name="Index" namecn="浏览" id="Index_Building" title="楼宇管理"/>
+      <Action name="Create" namecn="添加" id="Create_Building" title="添加楼宇"/>
+      <Action name="Edit" namecn="编辑" id="Edit_Building" title="编辑楼宇信息"/>
+      <Action name="Delete" namecn="删除" id="Delete_Building" title="删除楼宇"/>
+      <Action name="Exports" namecn="数据导出" id="Exports_Building" title="数据导出"/>
+    </Controller> 
+  </Area>
+
+  <Area name="" namecn="教室管理" id="ClassroomManage" title="教室管理">
+    <Controller name="ClassroomManage" namecn="楼宇管理" id="ClassroomManage" title="教室管理">
+      <Action defaultAction="true" name="Index" namecn="浏览" id="Index_Classroom" title="教室管理"/>
+      <Action name="Create" namecn="添加" id="Create_Classroom" title="添加教室"/>
+      <Action name="Edit" namecn="编辑" id="Edit_Classroom" title="编辑教室信息"/>
+      <Action name="Delete" namecn="删除" id="Delete_Classroom" title="删除教室"/>
+      <Action name="Exports" namecn="数据导出" id="Exports_Classroom" title="数据导出"/>
+    </Controller>
+  </Area>
+  
   <Area name="" namecn="设备管理" id="DeviceManage" title="设备管理">
-    <Controller name="Devices" namecn="设备管理" id="Device" title="设备管理">
+    <Controller name="DeviceManage" namecn="设备管理" id="DeviceManage" title="设备管理">
       <Action defaultAction="true" name="Index" namecn="浏览" id="Index_Device" title="设备管理"/>
       <Action name="Create" namecn="添加" id="Create_Device" title="添加设备"/>
       <Action name="Edit" namecn="编辑" id="Edit_Device" title="编辑设备信息"/>

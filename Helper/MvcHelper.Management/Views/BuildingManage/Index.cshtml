@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Device>
+﻿@model IEnumerable<Building>
 @{
     Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
     string pageId = ViewBag.PageId;
@@ -15,13 +15,8 @@
 @section Style
 {
     <style type="text/css">
-        .col-ClassRoomNumber { width: ; text-align: center }
-        .col-BuildingNumber { width: ; text-align: center }
-        .col-DeviceNumber { width: ; text-align: center }
-        .col-AddTime { width: ; text-align: center }
-        .col-AddName { width: ; text-align: center }
-        .col-State { width: ; text-align: center }
-        .col-Remark { width: ; text-align: center }
+        .col-Classrooms { width: ; text-align: center }
+        .col-Number { width: ; text-align: center }
     </style>
 }
 @section ScriptHeader
@@ -64,48 +59,24 @@
                 @Html.RenderRankUpColumnHeader(access, controllerPageInfo)
                 @Html.RenderEditColumnHeader(access, controllerPageInfo)
                 @Html.RenderDeleteColumnHeader(access, controllerPageInfo)
-                @Html.SortColumnHeaderFor(model => model.ClassRoom.Building.Number)
-                @Html.SortColumnHeaderFor(model => model.ClassRoom.Number)
-                @Html.SortColumnHeaderFor(model => model.Number)
-				@Html.SortColumnHeaderFor(model => model.AddTime)
-				@Html.SortColumnHeaderFor(model => model.AddName)
-				@Html.SortColumnHeaderFor(model => model.State)
-				@Html.SortColumnHeaderFor(model => model.Remark)
+				@Html.SortColumnHeaderFor(model => model.Number)
             </tr>
         </thead>
         <tbody>
             @{
-                Device item;
+                Building item;
                 for (int i = 0; i < Model.Count(); i++)
                 {
                     item = Model.ElementAt(i);
 					<tr>
 						@Html.RenderNoColumn(i, pager)
-						@Html.RenderSelectColumn(access, controllerPageInfo, item.ClassRoomId)
-                        @Html.RenderDetailsColumn(access, controllerPageInfo, item.ClassRoomId)
-                        @Html.RenderRankUpColumn(access, controllerPageInfo, item.ClassRoomId, pager.PageIndex, i)
-                        @Html.RenderEditColumn(access, controllerPageInfo, item.ClassRoomId)
-                        @Html.RenderDeleteColumn(access, controllerPageInfo, item.ClassRoomId)
-						<td class="col-ClassRoomNumber">
-							@Html.DisplayFor(modelItem => item.ClassRoom.Building.Number)
-						</td>
-						<td class="col-BuildingNumber">
-							@Html.DisplayFor(modelItem => item.ClassRoom.Number)
-						</td>
-                        <td class="col-DeviceNumber">
-                            @Html.DisplayFor(modelTtem => item.Number)
-                        </td>
-						<td class="col-AddTime">
-							@Html.DisplayFor(modelItem => item.AddTime)
-						</td>
-						<td class="col-AddName">
-							@Html.DisplayFor(modelItem => item.AddName)
-						</td>
-						<td class="col-State">
-							@Html.DisplayFor(modelItem => item.State)
-						</td>
-						<td class="col-Remark">
-							@Html.DisplayFor(modelItem => item.Remark)
+						@Html.RenderSelectColumn(access, controllerPageInfo, item.Id)
+                        @Html.RenderDetailsColumn(access, controllerPageInfo, item.Id)
+                        @Html.RenderRankUpColumn(access, controllerPageInfo, item.Id, pager.PageIndex, i)
+                        @Html.RenderEditColumn(access, controllerPageInfo, item.Id)
+                        @Html.RenderDeleteColumn(access, controllerPageInfo, item.Id)
+						<td class="col-Number">
+							@Html.DisplayFor(modelItem => item.Number)
 						</td>
                     </tr>
                 }
