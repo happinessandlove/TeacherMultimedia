@@ -48,13 +48,10 @@
                 </thead>*@
             <tbody>
 				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.Building, 4)</td>
+					<td class="form-key">@Html.DisplayNameFor(model => model.Building.Number, 4)</td>
 					<td class="form-value">@Html.SelectListFor(model => model.BuildingId, model => model.Building)&nbsp;@Html.ValidationMessageFor(model => model.BuildingId)</td>
 				</tr>
-				<tr>
-					<td class="form-key">@Html.DisplayNameFor(model => model.Device, 4)</td>
-					<td class="form-value">@Html.SelectListFor(model => model.Id, model => model.Device)&nbsp;@Html.ValidationMessageFor(model => model.Id)</td>
-				</tr>
+				
 				<tr>
 					<td class="form-key">@Html.DisplayNameFor(model => model.Number, 4)</td>
 					<td class="form-value">@Html.EditorFor(model => model.Number)&nbsp;@Html.ValidationMessageFor(model => model.Number)</td>

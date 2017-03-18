@@ -21,6 +21,7 @@
         .col-AddName { width: ; text-align: center }
         .col-State { width: ; text-align: center }
         .col-Remark { width: ; text-align: center }
+        .col-BuildingNumber { width:; text-align: center }
     </style>
 }
 @section ScriptHeader
@@ -63,8 +64,9 @@
                 @Html.RenderRankUpColumnHeader(access, controllerPageInfo)
                 @Html.RenderEditColumnHeader(access, controllerPageInfo)
                 @Html.RenderDeleteColumnHeader(access, controllerPageInfo)
-                @Html.SortColumnHeaderFor(model => model.ClassRoom, model => model.ClassRoom.Number)
-				@Html.SortColumnHeaderFor(model => model.Number)
+                @Html.SortColumnHeaderFor(model => model.ClassRoom.Building.Number,model => model.ClassRoom.Building.Number)
+                @Html.SortColumnHeaderFor(model => model.ClassRoom.Number, model => model.ClassRoom.Number)
+				@Html.SortColumnHeaderFor(model => model.IP)
 				@Html.SortColumnHeaderFor(model => model.AddTime)
 				@Html.SortColumnHeaderFor(model => model.AddName)
 				@Html.SortColumnHeaderFor(model => model.State)
@@ -84,11 +86,14 @@
                         @Html.RenderRankUpColumn(access, controllerPageInfo, item.ClassRoomId, pager.PageIndex, i)
                         @Html.RenderEditColumn(access, controllerPageInfo, item.ClassRoomId)
                         @Html.RenderDeleteColumn(access, controllerPageInfo, item.ClassRoomId)
+                        <td class="col-BuildingNumber">
+                            @Html.DisplayFor(modelItem => item.ClassRoom.Building.Number)
+                        </td>
 						<td class="col-ClassRoomNumber">
 							@Html.DisplayFor(modelItem => item.ClassRoom.Number)
 						</td>
 						<td class="col-Number">
-							@Html.DisplayFor(modelItem => item.Number)
+							@Html.DisplayFor(modelItem => item.IP)
 						</td>
 						<td class="col-AddTime">
 							@Html.DisplayFor(modelItem => item.AddTime)

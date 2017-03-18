@@ -177,7 +177,7 @@
       <DependentUpon>Empty.cs.t4</DependentUpon>
     </Compile>
     <Compile Include="Controllers\BuildingManageController.cs" />
-    <Compile Include="Controllers\ClassRoomManageController.cs" />
+    <Compile Include="Controllers\ClassroomManageController.cs" />
     <Compile Include="Controllers\DeviceManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonalUserController.cs" />
@@ -372,11 +372,11 @@
     <Content Include="Views\BuildingManage\Details.cshtml" />
     <Content Include="Views\BuildingManage\Edit.cshtml" />
     <Content Include="Views\BuildingManage\Index.cshtml" />
-    <Content Include="Views\ClassRoomManage\Create.cshtml" />
-    <Content Include="Views\ClassRoomManage\Delete.cshtml" />
-    <Content Include="Views\ClassRoomManage\Details.cshtml" />
-    <Content Include="Views\ClassRoomManage\Edit.cshtml" />
-    <Content Include="Views\ClassRoomManage\Index.cshtml" />
+    <Content Include="Views\ClassroomManage\Create.cshtml" />
+    <Content Include="Views\ClassroomManage\Delete.cshtml" />
+    <Content Include="Views\ClassroomManage\Details.cshtml" />
+    <Content Include="Views\ClassroomManage\Edit.cshtml" />
+    <Content Include="Views\ClassroomManage\Index.cshtml" />
     <Content Include="Views\DeviceManage\Create.cshtml" />
     <Content Include="Views\DeviceManage\Delete.cshtml" />
     <Content Include="Views\DeviceManage\Details.cshtml" />

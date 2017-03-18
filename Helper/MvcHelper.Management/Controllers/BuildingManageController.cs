@@ -108,7 +108,7 @@ namespace MvcHelper.Management.Controllers
             IQueryable<Building> datas = QueryHelper.ExecuteQuery(db.Buildings, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句
             Pager pager = new Pager(datas.Count(), op.OpPager, null); //页码相关对象
             ViewBag.Pager = pager;
-            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "xxxxx"; op.OpSortDirection = SortDirection.Ascending; }//首次打开页面的初始排序依据及方向 <需修改>
+            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "Number"; op.OpSortDirection = SortDirection.Ascending; }//首次打开页面的初始排序依据及方向 <需修改>
             IList<Building> buildings = datas
 				//.Include(s=>s.) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
 				.Sort(op.OpSortProperty, op.OpSortDirection) //排序

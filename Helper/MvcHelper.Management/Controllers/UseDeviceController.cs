@@ -1,10 +1,11 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Web;
-using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace MvcHelper.Management.Controllers
@@ -12,13 +13,14 @@ namespace MvcHelper.Management.Controllers
     public class UseDeviceController : Controller
     {
         private DbEntity db = new DbEntity();
+
         protected override void Dispose(bool disposing)
         {
-            if (disposing) db.Dispose();
+            db.Dispose();
             base.Dispose(disposing);
         }
         // GET: UseDevice
-        public ActionResult Index(OperationParam op)
+        public ActionResult Index()
         {
             #region 验证登录
             User loginUser = AccountHelper.LoginUser;
@@ -32,13 +34,9 @@ namespace MvcHelper.Management.Controllers
             ViewBag.PageId = pageId;
             #endregion
 
-            IQueryable<Building> datas = QueryHelper.ExecuteQuery(db.Buildings, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句 
-            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "Number"; op.OpSortDirection = SortDirection.Ascending; }
-            IList<Building> devices = datas
-                .Include(s => s.Classrooms)//Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
-                .Sort(op.OpSortProperty, op.OpSortDirection) //排序
-                .ToList(); //执行查询
-            return View(devices);
+            var buildings = from s in db.Buildings
+                            select s;
+            return View(buildings);
         }
 
         // GET: UseDevice/Details/5

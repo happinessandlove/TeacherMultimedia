@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Building>
+﻿@model Building
 
 @{ 
     Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
@@ -19,9 +19,4 @@
        // var actionPages = {@(Html.Raw(actionPages)) };
     </script>
 }
-<ul>
-    @foreach (Building p in Model)
-    {<li>@p.Number</li>
-     <li>@p.Classrooms</li>
-    }
-</ul>
+<div>@Html.SelectListFor(model => model.Id, model => model.Classrooms)</div>

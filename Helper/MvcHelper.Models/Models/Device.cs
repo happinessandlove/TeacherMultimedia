@@ -17,8 +17,8 @@ namespace Models
         public virtual ClassRoom ClassRoom { get; set; }
         #endregion===========================================================================================
 
-        [DisplayName("设备编号"), MyRequired]
-        public string Number { get; set; }
+        [DisplayName("中控IP"), MyRequired]
+        public string IP { get; set; }
         [DisplayName("添加设备时间")]
         public DateTime AddTime { get; set; }
         [DisplayName("添加人姓名"), MaxLength(10)]
