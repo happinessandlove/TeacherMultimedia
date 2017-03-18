@@ -26,7 +26,7 @@ namespace Models.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-             context.Roles.AddOrUpdate(
+            /* context.Roles.AddOrUpdate(
                  p => p.Name,
                  new Role { Id = Guid.Parse("00000000-0000-0000-0000-000000000001"), Name = "admin", MenuId = "{\"SystemManage\":true,\"PersonalUser\":true,\"Details_PersonalUser\":true,\"Edit_PersonalUser\":true,\"ModifyPwd_PersonalUser\":true,\"User\":true,\"Index_User\":true,\"Create_User\":true,\"Edit_User\":true,\"Delete_User\":true,\"Details_User\":true,\"Role\":true,\"Index_Role\":true,\"Create_Role\":true,\"Edit_Role\":true,\"Delete_Role\":true}" }
                  );
@@ -72,7 +72,7 @@ namespace Models.Migrations
              context.Devices.Add(new Device { ClassRoomId = Guid.Parse("00000000-0004-0000-0000-000000000000"), Number = "35672458", AddTime = DateTime.Now, AddName = "刘明", State = true, Remark = "无" });
              context.Devices.Add(new Device { ClassRoomId = Guid.Parse("00000000-0005-0000-0000-000000000000"), Number = "15672458", AddTime = DateTime.Now, AddName = "刘明", State = true, Remark = "无" });
              context.Devices.Add(new Device { ClassRoomId = Guid.Parse("00000000-0006-0000-0000-000000000000"), Number = "25672458", AddTime = DateTime.Now, AddName = "刘明", State = true, Remark = "无" });
-             base.Seed(context);
+             base.Seed(context);*/
         }
     }
     }

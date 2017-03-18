@@ -110,6 +110,7 @@ namespace MvcHelper.Management.Controllers
             ViewBag.Pager = pager;
             if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "AddTime"; op.OpSortDirection = SortDirection.Descending; }//首次打开页面的初始排序依据及方向 <需修改>
             IList<Device> devices = datas
+                .Include(s => s.ClassRoom.Building)
 				.Include(s => s.ClassRoom) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
 				.Sort(op.OpSortProperty, op.OpSortDirection) //排序
 				.GetPageData(pager) //选择当前页的数据
@@ -168,7 +169,7 @@ namespace MvcHelper.Management.Controllers
 		//防止“过多发布”攻击，启用指定绑定到特定属性的功能
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClassRoomId,Number,AddTime,AddName,State,Remark")] Device device)
+        public ActionResult Create([Bind(Include = "ClassRoomId,IP,AddTime,AddName,State,Remark")] Device device)
         {
             #region 验证登录
             User loginUser = AccountHelper.LoginUser;
@@ -190,11 +191,11 @@ namespace MvcHelper.Management.Controllers
             if (ModelState.IsValid)
             {
                 #region 特殊数据验证 <不需要验证则注释或删除>
-              
+                
                 #endregion
                 try
                 {
-                    device.ClassRoomId = Guid.NewGuid();
+                    //device.ClassRoomId = Guid.NewGuid();
                     db.Devices.Add(device);
                     db.SaveChanges();
                     ModelState.Clear();
@@ -268,7 +269,15 @@ namespace MvcHelper.Management.Controllers
             if (ModelState.IsValid)
             {
                 #region 特殊数据验证 <不需要验证则注释或删除>
-                
+                /*if (db.Devices.Where(s => s.Name == device.Name && s.ClassRoomId != device.ClassRoomId).Count() > 0)
+                {
+                    returnValue.Type = ReturnType.EditFailure;
+                    returnValue.Message = "该xxxx已存在";
+                    //针对需要显示导航属性的情形，重新查询数据库
+                    //device = db.Devices.Include(s => s.ClassRoom).FirstOrDefault(s => s.ClassRoomId == device.ClassRoomId); //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+                    ViewBag.ReturnValue = returnValue.ToJson();
+                    return View(device);
+                }*/
                 #endregion
                 try
                 {

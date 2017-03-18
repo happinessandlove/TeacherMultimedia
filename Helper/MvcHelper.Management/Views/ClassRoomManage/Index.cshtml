@@ -60,8 +60,8 @@
                 @Html.RenderRankUpColumnHeader(access, controllerPageInfo)
                 @Html.RenderEditColumnHeader(access, controllerPageInfo)
                 @Html.RenderDeleteColumnHeader(access, controllerPageInfo)
-                @Html.SortColumnHeaderFor(model => model.Building, model => model.Building.Number)
-                @Html.SortColumnHeaderFor(model => model.Device, model => model.Device.Number)
+                @Html.SortColumnHeaderFor(model => model.Building.Number, model => model.Building.Number)
+              @*  @Html.SortColumnHeaderFor(model => model.Device, model => model.Device.Number)*@
 				@Html.SortColumnHeaderFor(model => model.Number)
             </tr>
         </thead>
@@ -80,9 +80,6 @@
                         @Html.RenderDeleteColumn(access, controllerPageInfo, item.Id)
 						<td class="col-BuildingNumber">
 							@Html.DisplayFor(modelItem => item.Building.Number)
-						</td>
-						<td class="col-DeviceNumber">
-							@Html.DisplayFor(modelItem => item.Device.Number)
 						</td>
 						<td class="col-Number">
 							@Html.DisplayFor(modelItem => item.Number)

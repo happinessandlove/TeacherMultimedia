@@ -13,7 +13,7 @@ using Models;
 
 namespace MvcHelper.Management.Controllers
 {
-    public class ClassRoomManageController : Controller
+    public class ClassroomManageController : Controller
     {
         private DbEntity db = new DbEntity();
         protected override void Dispose(bool disposing)
@@ -32,7 +32,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Index_ClassRoom"; //站点目录中的id属性值
+            string pageId = "Index_Classroom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -108,9 +108,9 @@ namespace MvcHelper.Management.Controllers
             IQueryable<ClassRoom> datas = QueryHelper.ExecuteQuery(db.ClassRooms, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句
             Pager pager = new Pager(datas.Count(), op.OpPager, null); //页码相关对象
             ViewBag.Pager = pager;
-            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "xxxxx"; op.OpSortDirection = SortDirection.Ascending; }//首次打开页面的初始排序依据及方向 <需修改>
+            if (string.IsNullOrEmpty(op.OpSortProperty)) { op.OpSortProperty = "Number"; op.OpSortDirection = SortDirection.Ascending; }//首次打开页面的初始排序依据及方向 <需修改>
             IList<ClassRoom> classRooms = datas
-				.Include(s => s.Building).Include(s => s.Device) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
+				.Include(s => s.Building) //Include所有需要的导航属性和导航集合（含多级导航），一次性查询数据库 <需修改>
 				.Sort(op.OpSortProperty, op.OpSortDirection) //排序
 				.GetPageData(pager) //选择当前页的数据
 				.ToList(); //执行查询
@@ -131,7 +131,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Details_ClassRoom"; //站点目录中的id属性值
+            string pageId = "Details_Classroom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -154,7 +154,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Create_ClassRoom"; //站点目录中的id属性值
+            string pageId = "Create_Classroom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -177,7 +177,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Create_ClassRoom"; //站点目录中的id属性值
+            string pageId = "Create_Classroom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -229,7 +229,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Edit_ClassRoom"; //站点目录中的id属性值
+            string pageId = "Edit_Classroom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion
@@ -255,7 +255,7 @@ namespace MvcHelper.Management.Controllers
             #endregion
 
             #region 验证权限
-            string pageId = "Edit_ClassRoom"; //站点目录中的id属性值
+            string pageId = "Edit_Classroom"; //站点目录中的id属性值
             if (!Access.Validate(pageId)) return HttpNotFound();
             ViewBag.PageId = pageId;
             #endregion

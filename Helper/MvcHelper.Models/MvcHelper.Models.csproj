@@ -60,6 +60,14 @@
     <Compile Include="Migrations\201702260620144_intil.Designer.cs">
       <DependentUpon>201702260620144_intil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703180237412_addIp.cs" />
+    <Compile Include="Migrations\201703180237412_addIp.Designer.cs">
+      <DependentUpon>201703180237412_addIp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180242230_deleteNumber.cs" />
+    <Compile Include="Migrations\201703180242230_deleteNumber.Designer.cs">
+      <DependentUpon>201703180242230_deleteNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\DbEntity.cs" />
     <Compile Include="Enums\StudentStatus.cs" />
     <Compile Include="Enums\UserStatus.cs" />
@@ -94,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702260620144_intil.resx">
       <DependentUpon>201702260620144_intil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180237412_addIp.resx">
+      <DependentUpon>201703180237412_addIp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180242230_deleteNumber.resx">
+      <DependentUpon>201703180242230_deleteNumber.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

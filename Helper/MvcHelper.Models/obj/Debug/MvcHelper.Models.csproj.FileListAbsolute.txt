@@ -293,3 +293,6 @@ E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Model
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\MvcHelper.Models.csproj.GenerateResource.Cache
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.pdb
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\bin\Debug\MvcHelper.Framework.dll.config
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.addIp.resources
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.deleteNumber.resources

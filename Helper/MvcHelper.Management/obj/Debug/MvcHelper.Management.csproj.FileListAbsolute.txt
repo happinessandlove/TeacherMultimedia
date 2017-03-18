@@ -584,3 +584,5 @@ E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\obj\Debug\M
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\obj\Debug\MvcHelper.Management.csproj.GenerateResource.Cache
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\obj\Debug\MvcHelper.Management.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\obj\Debug\MvcHelper.Management.pdb
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\MvcHelper.Framework.dll.config
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\Models.dll.config
