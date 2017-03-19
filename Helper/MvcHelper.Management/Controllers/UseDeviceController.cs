@@ -34,9 +34,36 @@ namespace MvcHelper.Management.Controllers
             ViewBag.PageId = pageId;
             #endregion
 
+            string data = "44532D4F4D50010201000400222.192.58.63";
+
+            byte[] sendBytes = Encoding.UTF8.GetBytes(data);
+            byte[] recvBytes = new byte[1024];
+            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);// Stream
+            try
+            {
+                socket.Connect(new IPEndPoint(IPAddress.Parse("222.192.32.80"), 17001));
+                socket.Send(sendBytes, sendBytes.Length, SocketFlags.None);
+                int recvLength = socket.Receive(recvBytes, recvBytes.Length, SocketFlags.None);
+                string receive = Encoding.UTF8.GetString(recvBytes, 0, recvLength);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                socket.Shutdown(SocketShutdown.Both);
+                socket.Disconnect(false);
+                socket.Close();
+                socket.Dispose();
+            }
+            
             var buildings = from s in db.Buildings
+                         
                             select s;
             return View(buildings);
+
         }
 
         // GET: UseDevice/Details/5
