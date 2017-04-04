@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DbContext-Web.config Connection String" description="DbContext 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=DbContext-20170225204147; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|DbContext-20170225204147.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\我的文件\\GitHub\\TeacherMultimedia\\Helper\\MvcHelper\.Management\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DbContext']/@connectionString" />
+  </parameter>
+  <parameter name="Models.DbEntity-Web.config Connection String" description="Models.DbEntity 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="Models.DbEntity_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\我的文件\\GitHub\\TeacherMultimedia\\Helper\\MvcHelper\.Management\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Models.DbEntity']/@connectionString" />
+  </parameter>
+</parameters>

@@ -6,7 +6,7 @@ namespace Models
     public class DbEntity : DbContext, IDbContext
     {
         public DbEntity()
-            : base("Data Source = (LocalDb)\\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\\MultimediaManagement.mdf;Integrated Security = True")
+            : base("Data Source = 210.29.65.96; Initial Catalog=TMM;User Id=TMM; Password=TMM;")
         {
         }
         public DbSet<Role> Roles { get; set; }

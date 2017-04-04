@@ -1,0 +1,5 @@
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Validation\bin\Release\MvcHelper.Validation.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Validation\bin\Release\MvcHelper.Validation.pdb
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Validation\obj\Release\MvcHelper.Validation.csprojResolveAssemblyReference.cache
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Validation\obj\Release\MvcHelper.Validation.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Validation\obj\Release\MvcHelper.Validation.pdb

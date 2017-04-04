@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MvcHelper.Validation</name>
+    </assembly>
+    <members>
+        <member name="T:System.ComponentModel.DataAnnotations.MyRequiredAttribute">
+            <summary>
+            必需验证
+            <para>  数值非空属性必须加此标识，否则验证的错误信息为默认的</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyRequiredAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyRequiredAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyCheckedAttribute">
+            <summary>
+            复选框选中验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCheckedAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCheckedAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCheckedAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyDateAttribute">
+            <summary>
+            日期验证 
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyDateAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyDateAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyDateAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyYearMonthAttribute">
+            <summary>
+            年月验证 格式为：四位年份+.或/或-+一或两位月份
+            </summary>    
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyYearMonthAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyYearMonthAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyYearMonthAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyPostalCodeAttribute">
+            <summary>
+            邮政编码验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPostalCodeAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPostalCodeAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPostalCodeAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyEmailAddressAttribute">
+            <summary>
+            邮箱地址验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyEmailAddressAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyEmailAddressAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyEmailAddressAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyTelePhoneAttribute">
+            <summary>
+            固定电话验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyTelePhoneAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyTelePhoneAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyTelePhoneAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyMobileAttribute">
+            <summary>
+            移动电话验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMobileAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMobileAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMobileAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyPhoneAttribute">
+            <summary>
+            固定电话或移动电话验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPhoneAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPhoneAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPhoneAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyFaxAttribute">
+            <summary>
+            传真验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyFaxAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyFaxAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyFaxAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyUrlAttribute">
+            <summary>
+            网址验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyUrlAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyUrlAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyUrlAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyAcceptAttribute">
+            <summary>
+            文件后缀名验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyAcceptAttribute.#ctor(System.String)">
+            <summary>
+            文件后缀名验证
+            </summary>
+            <param name="exts">允许的后缀名，多个后缀名以逗号隔开，如："jpg,png,gif"</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyAcceptAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyAcceptAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyMaxLengthAttribute">
+            <summary>
+            字符串最大长度验证，同时决定数据库字段的长度
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMaxLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="maxLength">最大长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMaxLengthAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyMinLengthAttribute">
+            <summary>
+            字符串最小长度验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMinLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="minLength">最小长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMinLengthAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyStringLengthAttribute">
+            <summary>
+            字符串长度范围验证，限定最大长度时将决定数据库字段的长度
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            仅限定最小长度 
+            </summary>
+            <param name="minLength">最小长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            限定最小与最大长度
+            </summary>
+            <param name="minLength">最小长度</param>
+            <param name="maxLength">最大长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyStringLengthChsAttribute">
+            <summary>
+            字符串长度范围验证，中文算两位。
+            <para>  不决定数据库字段长度</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthChsAttribute.#ctor(System.Int32)">
+            <summary>
+            仅限定最小长度 
+            </summary>
+            <param name="minLength">最小长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthChsAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            限定最小与最大长度
+            </summary>
+            <param name="minLength">最小长度</param>
+            <param name="maxLength">最大长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthChsAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyStringLengthChsAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyFixedLengthAttribute">
+            <summary>
+            字符串固定长度验证，同时决定数据库字段的长度
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyFixedLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="length">长度</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyFixedLengthAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyIntegerAttribute">
+            <summary>
+            整数验证 正整数、负整数，限定正整数请用Min或Range
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyIntegerAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyIntegerAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyIntegerAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyNumberAttribute">
+            <summary>
+            数字验证
+            <para>  数字 正数、负数，可含小数，不可用在数值类型属性上，限定正数请用Min或Range</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyNumberAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyNumberAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyNumberAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyMaxAttribute">
+            <summary>
+            数值型最大值
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMaxAttribute.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="max">最大值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMaxAttribute.#ctor(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="max">最大值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMaxAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyMinAttribute">
+            <summary>
+            最小值验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMinAttribute.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="min">最小值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMinAttribute.#ctor(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="min">最小值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyMinAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyRangeAttribute">
+            <summary>
+            数值范围
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyRangeAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="min">最小值</param>
+            <param name="max">最大值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyRangeAttribute.#ctor(System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="min">最小值</param>
+            <param name="max">最大值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyRangeAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MySelectAttribute">
+            <summary>
+            下拉列表框验证 值为0表示未选
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MySelectAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MySelectAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MySelectAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyIdCardNoAttribute">
+            <summary>
+            身份证号验证
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyIdCardNoAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyIdCardNoAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyIdCardNoAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.ModelClientValidationMyCompareRule">
+            <summary>
+            比较 客户端
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.ModelClientValidationMyCompareRule.#ctor(System.String,System.String,System.ComponentModel.DataAnnotations.ValidationCompareOperator,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errorMessage"></param>
+            <param name="Original"></param>
+            <param name="op"></param>
+            <param name="type"></param>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.ValidationDataType">
+            <summary>
+            比较验证的属性类型
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationDataType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationDataType.Integer">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationDataType.Double">
+            <summary>
+            浮点型
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationDataType.Date">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationDataType.Currency">
+            <summary>
+            货币
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationDataType.Decimal">
+            <summary>
+            高精度浮点型
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.ValidationCompareOperator">
+            <summary>
+            比较验证的关系类型
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationCompareOperator.Equal">
+            <summary>
+            ==
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationCompareOperator.NotEqual">
+            <summary>
+            !=
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationCompareOperator.GreaterThan">
+            <summary>
+            &gt;
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationCompareOperator.GreaterThanEqual">
+            <summary>
+            &gt;=
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationCompareOperator.LessThan">
+            <summary>
+            &lt;
+            </summary>
+        </member>
+        <member name="F:System.ComponentModel.DataAnnotations.ValidationCompareOperator.LessThanEqual">
+            <summary>
+            &lt;=
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyCompareAttribute">
+            <summary>
+            两个字段（属性）的比较验证
+            验证信息必须明确指定
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCompareAttribute.#ctor(System.String,System.ComponentModel.DataAnnotations.ValidationCompareOperator,System.ComponentModel.DataAnnotations.ValidationDataType)">
+            <summary>
+            
+            </summary>
+            <param name="originalProperty">相比较的属性名称</param>
+            <param name="op">关系。ValidationCompareOperator枚举值</param>
+            <param name="type">数据类型。ValidationDataType枚举值</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCompareAttribute.FormatErrorMessage(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCompareAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyCompareAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            
+            </summary>
+            <param name="metadata"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyUserNameAttribute">
+            <summary>
+            用户名验证
+            <para>  由中文、字母、数字、.-_@组成</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyUserNameAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyUserNameAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyUserNameAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.MyPasswordAttribute">
+            <summary>
+            密码验证
+            <para>  由字母、数字、下划线组成，必须包含其中两种字符</para>
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPasswordAttribute.#ctor">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPasswordAttribute.IsValid(System.Object)">
+            <summary> </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.MyPasswordAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary> </summary>
+        </member>
+    </members>
+</doc>

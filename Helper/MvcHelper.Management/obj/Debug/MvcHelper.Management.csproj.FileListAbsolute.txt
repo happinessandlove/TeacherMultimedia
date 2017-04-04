@@ -586,3 +586,12 @@ E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\obj\Debug\M
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\obj\Debug\MvcHelper.Management.pdb
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\MvcHelper.Framework.dll.config
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\Models.dll.config
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\System.Net.Http.Formatting.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\System.Web.Http.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\System.Web.Http.WebHost.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\System.Net.Http.Formatting.xml
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\System.Web.Http.xml
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\System.Web.Http.WebHost.xml
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\zh-Hans\System.Web.Http.resources.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Management\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
