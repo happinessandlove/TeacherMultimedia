@@ -29,6 +29,6 @@ C:\Users\liuming\Desktop\教师多媒体设备自助服务平台\Helper\CSharpHe
 E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\bin\Debug\CSharpHelper.Extension.XML
 E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\bin\Debug\CSharpHelper.Extension.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\bin\Debug\CSharpHelper.Extension.pdb
-E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Debug\CSharpHelper.Extension.csprojResolveAssemblyReference.cache
 E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Debug\CSharpHelper.Extension.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Debug\CSharpHelper.Extension.pdb
+E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Debug\CSharpHelper.Extension.csprojResolveAssemblyReference.cache

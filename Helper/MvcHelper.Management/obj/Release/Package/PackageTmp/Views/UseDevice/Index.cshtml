@@ -1,0 +1,22 @@
+﻿@model Building
+
+@{ 
+    Layout = "~/Views/Shared/_LayoutSubpage.cshtml";
+    string pageId = ViewBag.PageId;
+    PageInfo pageInfo = SiteDirectory.GetPageInfo(pageId);
+    PageInfo controllerPageInfo = pageInfo.Parent;
+    ViewBag.Pid = pageId;
+    ViewBag.Pclass = pageInfo.Name;
+    string actionPages = string.Join(",", controllerPageInfo.Children.Select(s => s.Name + ":'" + s.Id + "'"));
+    Dictionary<string, bool> access = Access.All;
+    Pager pager = ViewBag.Pager;
+    OperationParam operationParam = ViewBag.OperationParam;
+    User loginUser = ViewBag.LoginUser;
+}
+@section ScriptHeader
+{
+    <script type="text/javascript">
+       // var actionPages = {@(Html.Raw(actionPages)) };
+    </script>
+}
+<div>@Html.SelectListFor(model => model.Id, model => model.Classrooms)</div>

@@ -104,7 +104,7 @@ namespace MvcHelper.Management.Controllers
                     break;
             }
             #endregion
-
+            List<Building> Buildings = db.Buildings.OrderBy(s => s.Id).ToList();
             IQueryable<Building> datas = QueryHelper.ExecuteQuery(db.Buildings, op.OpQueryString); //执行前台查询条件（延迟）。若有附加条件，后续添加.Where()子句
             Pager pager = new Pager(datas.Count(), op.OpPager, null); //页码相关对象
             ViewBag.Pager = pager;

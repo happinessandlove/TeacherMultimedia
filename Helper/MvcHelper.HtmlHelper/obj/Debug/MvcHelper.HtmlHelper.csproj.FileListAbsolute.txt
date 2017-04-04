@@ -89,8 +89,8 @@ E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\bin\Debug\S
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\bin\Debug\System.Web.WebPages.Razor.xml
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\bin\Debug\System.Web.WebPages.xml
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\bin\Debug\System.Web.WebPages.Deployment.xml
-E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\obj\Debug\MvcHelper.HtmlHelper.csprojResolveAssemblyReference.cache
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\obj\Debug\MvcHelper.HtmlHelper.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\obj\Debug\MvcHelper.HtmlHelper.pdb
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\bin\Debug\ZYSocketFrame.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\bin\Debug\ZYSocketShare.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.HtmlHelper\obj\Debug\MvcHelper.HtmlHelper.csprojResolveAssemblyReference.cache

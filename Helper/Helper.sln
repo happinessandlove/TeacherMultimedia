@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpHelper.Extension", "CSharpHelper.Extension\CSharpHelper.Extension.csproj", "{77A8F0C7-9E2E-4018-9BB4-B8AAABA63C71}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcHelper.HtmlHelper", "MvcHelper.HtmlHelper\MvcHelper.HtmlHelper.csproj", "{99C2F929-ACCA-4E00-9A86-AC031FE3A569}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcHelper.Framework", "MvcHelper.Framework\MvcHelper.Framework.csproj", "{A9AA2304-7335-45FE-87EA-770815D27582}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{60EDD6C7-28E6-4153-A105-D5F59D771E45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A9AA2304-7335-45FE-87EA-770815D27582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9AA2304-7335-45FE-87EA-770815D27582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9AA2304-7335-45FE-87EA-770815D27582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60EDD6C7-28E6-4153-A105-D5F59D771E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60EDD6C7-28E6-4153-A105-D5F59D771E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60EDD6C7-28E6-4153-A105-D5F59D771E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60EDD6C7-28E6-4153-A105-D5F59D771E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

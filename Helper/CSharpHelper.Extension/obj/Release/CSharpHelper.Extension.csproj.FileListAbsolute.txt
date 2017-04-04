@@ -1,0 +1,5 @@
+E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\bin\Release\CSharpHelper.Extension.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\bin\Release\CSharpHelper.Extension.pdb
+E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Release\CSharpHelper.Extension.csprojResolveAssemblyReference.cache
+E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Release\CSharpHelper.Extension.dll
+E:\我的文件\GitHub\TeacherMultimedia\Helper\CSharpHelper.Extension\obj\Release\CSharpHelper.Extension.pdb

@@ -288,11 +288,8 @@ E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\bin\Debug\Micro
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\MvcHelper.Models.csprojResolveAssemblyReference.cache
-E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.empty.resources
-E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.intil.resources
-E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\MvcHelper.Models.csproj.GenerateResource.Cache
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.dll
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.pdb
 E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\bin\Debug\MvcHelper.Framework.dll.config
-E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.addIp.resources
-E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.deleteNumber.resources
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\Models.Migrations.a.resources
+E:\我的文件\GitHub\TeacherMultimedia\Helper\MvcHelper.Models\obj\Debug\MvcHelper.Models.csproj.GenerateResource.Cache
